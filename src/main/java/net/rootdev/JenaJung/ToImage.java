@@ -6,6 +6,8 @@ import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.util.FileManager;
 
+import conformance.mapper.definition.Link;
+import conformance.mapper.definition.Node;
 import edu.uci.ics.jung.algorithms.layout.FRLayout;
 import edu.uci.ics.jung.algorithms.layout.Layout;
 import edu.uci.ics.jung.algorithms.scoring.ClosenessCentrality;
@@ -27,8 +29,6 @@ import java.util.logging.Logger;
 
 import javax.imageio.ImageIO;
 
-import ontology.alignment.definition.Link;
-import ontology.alignment.definition.Node;
 import net.rootdev.JenaJung.JenaJungGraph;
 import net.rootdev.JenaJung.Transformers;
 

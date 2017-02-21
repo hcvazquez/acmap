@@ -1,6 +1,5 @@
 package semilar.config;
 
-import java.io.PrintStream;
 import java.util.ArrayList;
 
 import semilar.data.Sentence;

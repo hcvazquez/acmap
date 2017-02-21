@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<concerns>
+	<concern name="hOLA1">
+		<description>sas1</description>
+		<sub_concern name="Subhola1">
+			<description>sas</description>
+			<java_element name="ontology.alignment.view" type="PACKAGE">
+				<path>.ontology.alignment.view</path>
+			</java_element>
+			<java_element name="ontology.alignment.pairing" type="PACKAGE">
+				<path>.ontology.alignment.pairing</path>
+			</java_element>
+			<java_element name="MapVerifyManager.java" type="CU">
+				<path>.ontology.alignment.utils.MapVerifyManager.java</path>
+			</java_element>
+			<java_element
+				name="unknown: name(unknown: name(unknown: name(GephiExporter),path(.ontology.alignment.utils.GephiExporter.java.GephiExporter&#10;&#9;&#9;&#9;&#9;)),path(&#10;&#9;&#9;&#9;&#9;&#9;.unknown:&#10;&#9;&#9;&#9;&#9;&#9;name(GephiExporter),path(.ontology.alignment.utils.GephiExporter.java.GephiExporter&#10;&#9;&#9;&#9;&#9;&#9;)&#10;&#9;&#9;&#9;&#9;)),path(.unknown: name(unknown:&#10;&#9;&#9;&#9;&#9;&#9;name(GephiExporter),path(.ontology.alignment.utils.GephiExporter.java.GephiExporter&#10;&#9;&#9;&#9;&#9;&#9;)),path(&#10;&#9;&#9;&#9;&#9;&#9;.unknown:&#10;&#9;&#9;&#9;&#9;&#9;name(GephiExporter),path(.ontology.alignment.utils.GephiExporter.java.GephiExporter&#10;&#9;&#9;&#9;&#9;&#9;)&#10;&#9;&#9;&#9;&#9;&#9;)&#10;&#9;&#9;&#9;&#9;)"
+				type="CU">
+				<path>.unknown: name(unknown: name(unknown:
+					name(GephiExporter),path(.ontology.alignment.utils.GephiExporter.java.GephiExporter
+					)),path(
+					.unknown:
+					name(GephiExporter),path(.ontology.alignment.utils.GephiExporter.java.GephiExporter
+					)
+					)),path(.unknown: name(unknown:
+					name(GephiExporter),path(.ontology.alignment.utils.GephiExporter.java.GephiExporter
+					)),path(
+					.unknown:
+					name(GephiExporter),path(.ontology.alignment.utils.GephiExporter.java.GephiExporter
+					)
+					)
+					)
+				</path>
+			</java_element>
+		</sub_concern>
+		<java_element name="ontology.alignment" type="PACKAGE">
+			<path>.ontology.alignment</path>
+		</java_element>
+	</concern>
+	<concern name="hOLA">
+		<description>sas</description>
+		<java_element name="ontology.alignment" type="PACKAGE">
+			<path>.ontology.alignment</path>
+		</java_element>
+	</concern>
+	<concern name="NuevoC">
+		<description>asd</description>
+		<java_element name="ontology.alignment.grouping.classification"
+			type="PACKAGE">
+			<path>.ontology.alignment.grouping.classification</path>
+		</java_element>
+	</concern>
+	<concern name="Otro">
+		<description>
+		</description>
+		<java_element name="ontology.alignment.grouping.clustering"
+			type="PACKAGE">
+			<path>.ontology.alignment.grouping.clustering</path>
+		</java_element>
+		<java_element name="ClusterGrouper" type="TYPE">
+			<path>.ontology.alignment.grouping.clustering.ClusterGrouper.java.ClusterGrouper
+			</path>
+		</java_element>
+		<java_element name="equals" type="METHOD">
+			<path>.ontology.alignment.pairing.PairOE.java.PairOE.equals</path>
+		</java_element>
+	</concern>
+</concerns>

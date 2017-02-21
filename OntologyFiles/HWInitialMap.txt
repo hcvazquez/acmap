@@ -1,0 +1,13 @@
+HWServer=Server
+Command=Views
+LoginMenu=Views
+Symptom=HealthWatcher_Model
+Employee=HealthWatcher_Model
+IFacade=Service_Facade
+FacadeFactory=Service_Facade
+SymptomRecord=Business_DAO
+EmployeeRecord=Business_DAO
+ConcurrencyManager=Concurrency_Manager
+IPersistenceMechanism=Persistence_Layer
+PersistenceMechanism=Persistence_Layer
+LogMechanism=Logging
