@@ -1,0 +1,2490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+          <!ENTITY xsd		"http://www.w3.org/2001/XMLSchema#" >
+	  <!ENTITY rdf		"http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	  <!ENTITY rdfs		"http://www.w3.org/2000/01/rdf-schema#" >
+	  <!ENTITY dc		"http://purl.org/dc/elements/1.1/" >
+	  <!ENTITY owl		"http://www.w3.org/2002/07/owl#" >
+	  <!ENTITY foaf 	"http://xmlns.com/foaf/0.1/">
+	  <!ENTITY ical 	"http://www.w3.org/2002/12/cal/ical#">]>
+
+
+<rdf:RDF
+ xmlns:rdf	="&rdf;"
+ xmlns:rdfs	="&rdfs;"
+ xmlns:owl	="http://www.w3.org/2002/07/owl#"
+ xmlns:dc	="&dc;">
+	  
+  <owl:Class rdf:about="AlbumController">
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName2" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance2" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName3" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance3" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentStoreName" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance4" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getCurrentStoreName" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance5" />
+    <owl:onProperty rdf:resource="#AbstractController.setAlbumListAsCurrentScreen" />
+    <owl:onProperty rdf:resource="#AlbumData.deleteAlbum" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getCurrentStoreName2" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance6" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen2" />
+    <owl:onProperty rdf:resource="#getFormType" />
+    <owl:onProperty rdf:resource="#AlbumData.createNewAlbum" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData2" />
+    <owl:onProperty rdf:resource="#getLabelName" />
+    <owl:onProperty rdf:resource="#getFormType2" />
+    <owl:onProperty rdf:resource="#PersistenceMechanismException.getCause" />
+    <owl:onProperty rdf:resource="#AlbumData.resetMediaData" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData3" />
+    <owl:onProperty rdf:resource="#PersistenceMechanismException.getCause2" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen2" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData4" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen3" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen2" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen4" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.repaintListAlbum" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen5" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames2" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData5" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen3" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen6" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName4" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance7" />
+  </owl:Class>
+  <owl:Class rdf:about="NetworkScreen" />
+  <owl:Class rdf:about="ImageMediaAccessor">
+    <owl:onProperty rdf:resource="#MediaAccessor.removeRecords" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData2" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData3" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData4" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData5" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData6" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData7" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData8" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData9" />
+    <owl:onProperty rdf:resource="#readMediaAsByteArray" />
+    <owl:onProperty rdf:resource="#getBytesFromMediaInfo" />
+    <owl:onProperty rdf:resource="#getMediaInfoFromBytes" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaArrayOfBytes" />
+    <owl:onProperty rdf:resource="#MediaAccessor.loadMediaBytesFromRMS" />
+  </owl:Class>
+  <owl:Class rdf:about="PhotoViewController">
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setItemName" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setLabePath" />
+    <owl:onProperty rdf:resource="#PhotoViewScreen.isFromSMS" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen3" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setCapturedMedia" />
+    <owl:onProperty rdf:resource="#PhotoViewScreen.getImage" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen4" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getCapturedMedia" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen5" />
+    <owl:onProperty rdf:resource="#AlbumData.getMediaInfo" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData6" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getItemName" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen6" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getPath" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen7" />
+    <owl:onProperty rdf:resource="#AlbumData.addImageData" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData7" />
+    <owl:onProperty rdf:resource="#AlbumData.addMediaData" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData8" />
+    <owl:onProperty rdf:resource="#PersistenceMechanismException.getCause3" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.repaintListAlbum2" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen7" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames3" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData9" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen4" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen8" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName5" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance8" />
+    <owl:onProperty rdf:resource="#CaptureVideoScreen.takePicture" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setItemName2" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setLabePath2" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setCapturedMedia2" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.repaintListAlbum3" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen9" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames4" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData10" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen5" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen10" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName6" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance9" />
+  </owl:Class>
+  <owl:Class rdf:about="MediaUtil">
+    <owl:onProperty rdf:resource="#MediaData.setFavorite" />
+    <owl:onProperty rdf:resource="#MediaData.setNumberOfViews" />
+    <owl:onProperty rdf:resource="#MediaData.setRecordId" />
+    <owl:onProperty rdf:resource="#MediaData.getRecordId" />
+    <owl:onProperty rdf:resource="#MediaData.getForeignRecordId" />
+    <owl:onProperty rdf:resource="#MediaData.getParentAlbumName" />
+    <owl:onProperty rdf:resource="#MediaData.getMediaLabel" />
+    <owl:onProperty rdf:resource="#MediaData.isFavorite" />
+    <owl:onProperty rdf:resource="#MediaData.getNumberOfViews" />
+  </owl:Class>
+  <owl:Class rdf:about="SmsReceiverController">
+    <owl:onProperty rdf:resource="#PhotoViewScreen.setImage" />
+    <owl:onProperty rdf:resource="#PhotoViewScreen.setFromSMS" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData11" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen11" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen6" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.repaintListAlbum4" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen12" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames5" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData12" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen7" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen13" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName7" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance10" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.repaintListAlbum5" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen14" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames6" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData13" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen8" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen15" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName8" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance11" />
+  </owl:Class>
+  <owl:Class rdf:about="ImagePathNotValidException" />
+  <owl:Class rdf:about="CaptureVideoScreen" />
+  <owl:Class rdf:about="VideoCaptureController">
+    <owl:onProperty rdf:resource="#CaptureVideoScreen.startCapture" />
+    <owl:onProperty rdf:resource="#CaptureVideoScreen.pauseCapture" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setItemName3" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setLabePath3" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setCapturedMedia3" />
+    <owl:onProperty rdf:resource="#CaptureVideoScreen.getByteArrays" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getItemName2" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen8" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getPath2" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen9" />
+    <owl:onProperty rdf:resource="#AlbumData.addVideoData" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData14" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getCapturedMedia2" />
+    <owl:onProperty rdf:resource="#CaptureVideoScreen.pauseCapture2" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.repaintListAlbum6" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen16" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames7" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData15" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen9" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen17" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName9" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance12" />
+  </owl:Class>
+  <owl:Class rdf:about="MusicMediaAccessor">
+    <owl:onProperty rdf:resource="#readMediaAsByteArray2" />
+    <owl:onProperty rdf:resource="#MusicMediaUtil.getBytesFromMediaInfo" />
+    <owl:onProperty rdf:resource="#MusicMediaUtil.getMultiMediaInfoFromBytes" />
+    <owl:onProperty rdf:resource="#MediaAccessor.removeRecords2" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData10" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData11" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData12" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData13" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData14" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData15" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData16" />
+    <owl:onProperty rdf:resource="#MediaAccessor.loadMediaDataFromRMS" />
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo" />
+    <owl:onProperty rdf:resource="#MediaAccessor.updateMediaInfo" />
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo2" />
+    <owl:onProperty rdf:resource="#MediaAccessor.updateMediaInfo2" />
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo3" />
+    <owl:onProperty rdf:resource="#MediaAccessor.updateMediaInfo3" />
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo4" />
+    <owl:onProperty rdf:resource="#MediaAccessor.updateMediaInfo4" />
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo5" />
+    <owl:onProperty rdf:resource="#MediaAccessor.updateMediaInfo5" />
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo6" />
+    <owl:onProperty rdf:resource="#MediaAccessor.updateMediaInfo6" />
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo7" />
+    <owl:onProperty rdf:resource="#MediaAccessor.updateMediaInfo7" />
+  </owl:Class>
+  <owl:Class rdf:about="ImageNotFoundException" />
+  <owl:Class rdf:about="SmsSenderThread">
+    <owl:onProperty rdf:resource="#SmsMessaging.sendImage" />
+  </owl:Class>
+  <owl:Class rdf:about="AlbumData">
+    <owl:onProperty rdf:resource="#MediaAccessor.loadAlbums" />
+    <owl:onProperty rdf:resource="#MediaAccessor.getAlbumNames" />
+    <owl:onProperty rdf:resource="#MediaAccessor.loadMediaDataFromRMS2" />
+    <owl:onProperty rdf:resource="#MediaAccessor.createNewAlbum" />
+    <owl:onProperty rdf:resource="#MediaAccessor.deleteAlbum" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData17" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaData18" />
+    <owl:onProperty rdf:resource="#MediaAccessor.deleteSingleMediaFromRMS" />
+    <owl:onProperty rdf:resource="#MediaAccessor.resetRecordStore" />
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo8" />
+    <owl:onProperty rdf:resource="#MediaAccessor.loadMediaDataFromRMS3" />
+    <owl:onProperty rdf:resource="#MediaAccessor.updateMediaInfo8" />
+    <owl:onProperty rdf:resource="#MediaAccessor.loadMediaBytesFromRMS2" />
+    <owl:onProperty rdf:resource="#VideoMediaAccessor.addVideoData" />
+    <owl:onProperty rdf:resource="#ImageMediaAccessor.addImageData" />
+  </owl:Class>
+  <owl:Class rdf:about="MediaAccessor">
+    <owl:onProperty rdf:resource="#MediaData.setRecordId2" />
+    <owl:onProperty rdf:resource="#MediaData.setRecordId3" />
+    <owl:onProperty rdf:resource="#MediaData.getMediaLabel2" />
+    <owl:onProperty rdf:resource="#MediaData.getParentAlbumName2" />
+    <owl:onProperty rdf:resource="#MediaData.getRecordId2" />
+    <owl:onProperty rdf:resource="#MediaData.getMediaLabel3" />
+    <owl:onProperty rdf:resource="#MediaData.getMediaLabel4" />
+    <owl:onProperty rdf:resource="#MediaData.getForeignRecordId2" />
+  </owl:Class>
+  <owl:Class rdf:about="InvalidImageFormatException" />
+  <owl:Class rdf:about="AbstractController">
+    <owl:onProperty rdf:resource="#ControllerInterface.handleCommand" />
+    <owl:onProperty rdf:resource="#ControllerInterface.postCommand" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getCurrentStoreName3" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance13" />
+  </owl:Class>
+  <owl:Class rdf:about="ScreenSingleton" />
+  <owl:Class rdf:about="Constants" />
+  <owl:Class rdf:about="AddMediaToAlbum" />
+  <owl:Class rdf:about="PhotoViewScreen" />
+  <owl:Class rdf:about="BaseController">
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames8" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen18" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen19" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.initMenu" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen20" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen10" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen21" />
+    <owl:onProperty rdf:resource="#MainUIMidlet.destroyApp" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getCurrentScreenName" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance14" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.repaintListAlbum7" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen22" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames9" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData16" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen11" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen23" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName10" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance15" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen12" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getMainMenu" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance16" />
+  </owl:Class>
+  <owl:Class rdf:about="NewLabelScreen" />
+  <owl:Class rdf:about="InvalidImageDataException" />
+  <owl:Class rdf:about="PlayVideoController">
+    <owl:onProperty rdf:resource="#PlayVideoScreen.startVideo" />
+    <owl:onProperty rdf:resource="#PlayVideoScreen.stopVideo" />
+    <owl:onProperty rdf:resource="#PlayVideoScreen.stopVideo2" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.repaintListAlbum8" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen24" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames10" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData17" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen13" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen25" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName11" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance17" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setItemName4" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setLabePath4" />
+    <owl:onProperty rdf:resource="#AlbumData.getMediaInfo2" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData18" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getPath3" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen10" />
+    <owl:onProperty rdf:resource="#AlbumData.addMediaData2" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData19" />
+    <owl:onProperty rdf:resource="#PersistenceMechanismException.getCause4" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.repaintListAlbum9" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen26" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames11" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData20" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen14" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen27" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName12" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance18" />
+  </owl:Class>
+  <owl:Class rdf:about="SelectMediaController">
+    <owl:onProperty rdf:resource="#BaseController.init" />
+    <owl:onProperty rdf:resource="#BaseController.init2" />
+    <owl:onProperty rdf:resource="#BaseController.init3" />
+  </owl:Class>
+  <owl:Class rdf:about="MediaListController">
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentStoreName2" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance19" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName13" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance20" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName2" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData21" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen28" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData22" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData23" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData24" />
+    <owl:onProperty rdf:resource="#MediaListScreen.initMenu" />
+    <owl:onProperty rdf:resource="#AlbumData.getMedias" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData25" />
+    <owl:onProperty rdf:resource="#MediaData.isFavorite2" />
+    <owl:onProperty rdf:resource="#MediaData.getMediaLabel5" />
+    <owl:onProperty rdf:resource="#MediaData.getMediaLabel6" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen15" />
+    <owl:onProperty rdf:resource="#MediaData.getNumberOfViews2" />
+    <owl:onProperty rdf:resource="#MediaData.getNumberOfViews3" />
+  </owl:Class>
+  <owl:Class rdf:about="MediaData" />
+  <owl:Class rdf:about="InvalidPhotoAlbumNameException" />
+  <owl:Class rdf:about="MultiMediaData">
+    <owl:onProperty rdf:resource="#MediaData.getForeignRecordId3" />
+    <owl:onProperty rdf:resource="#MediaData.getParentAlbumName3" />
+    <owl:onProperty rdf:resource="#MediaData.getMediaLabel7" />
+    <owl:onProperty rdf:resource="#MediaData.getRecordId3" />
+    <owl:onProperty rdf:resource="#MediaData.isFavorite3" />
+    <owl:onProperty rdf:resource="#MediaData.getNumberOfViews4" />
+  </owl:Class>
+  <owl:Class rdf:about="VideoMediaAccessor">
+    <owl:onProperty rdf:resource="#MediaAccessor.removeRecords3" />
+    <owl:onProperty rdf:resource="#MediaAccessor.loadMediaDataFromRMS4" />
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo9" />
+    <owl:onProperty rdf:resource="#MediaAccessor.updateMediaInfo9" />
+    <owl:onProperty rdf:resource="#MediaAccessor.addMediaArrayOfBytes2" />
+  </owl:Class>
+  <owl:Class rdf:about="MusicMediaUtil">
+    <owl:onProperty rdf:resource="#MultiMediaData.getTypeMedia" />
+  </owl:Class>
+  <owl:Class rdf:about="BaseThread" />
+  <owl:Class rdf:about="SmsMessaging" />
+  <owl:Class rdf:about="BaseMessaging" />
+  <owl:Class rdf:about="MediaListScreen" />
+  <owl:Class rdf:about="PlayVideoScreen" />
+  <owl:Class rdf:about="MainUIMidlet">
+    <owl:onProperty rdf:resource="#AbstractController.setNextController2" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController3" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController4" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController5" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController6" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController7" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController8" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController9" />
+    <owl:onProperty rdf:resource="#SelectMediaController.setImageAlbumData" />
+    <owl:onProperty rdf:resource="#SelectMediaController.setImageController" />
+    <owl:onProperty rdf:resource="#SelectMediaController.setMusicAlbumData" />
+    <owl:onProperty rdf:resource="#SelectMediaController.setMusicController" />
+    <owl:onProperty rdf:resource="#SelectMediaController.setVideoAlbumData" />
+    <owl:onProperty rdf:resource="#SelectMediaController.setVideoController" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController10" />
+    <owl:onProperty rdf:resource="#SelectMediaController.setMusicAlbumData2" />
+    <owl:onProperty rdf:resource="#SelectMediaController.setMusicController2" />
+    <owl:onProperty rdf:resource="#SelectMediaController.setVideoAlbumData2" />
+    <owl:onProperty rdf:resource="#SelectMediaController.setVideoController2" />
+    <owl:onProperty rdf:resource="#SelectTypeOfMedia.initMenu" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setMainMenu" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance21" />
+    <owl:onProperty rdf:resource="#BaseController.init4" />
+    <owl:onProperty rdf:resource="#BaseController.init5" />
+    <owl:onProperty rdf:resource="#BaseController.init6" />
+  </owl:Class>
+  <owl:Class rdf:about="InvalidArrayFormatException" />
+  <owl:Class rdf:about="PlayMediaScreen" />
+  <owl:Class rdf:about="PersistenceMechanismException" />
+  <owl:Class rdf:about="SelectTypeOfMedia" />
+  <owl:Class rdf:about="MusicPlayController">
+    <owl:onProperty rdf:resource="#PlayMediaScreen.startPlay" />
+    <owl:onProperty rdf:resource="#PlayMediaScreen.pausePlay" />
+    <owl:onProperty rdf:resource="#PlayMediaScreen.pausePlay2" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.repaintListAlbum10" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen29" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames12" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData26" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen16" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen30" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName14" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance22" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setItemName5" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.setLabePath5" />
+    <owl:onProperty rdf:resource="#AlbumData.getMediaInfo3" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData27" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getPath4" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen11" />
+    <owl:onProperty rdf:resource="#AlbumData.addMediaData3" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData28" />
+    <owl:onProperty rdf:resource="#PersistenceMechanismException.getCause5" />
+    <owl:onProperty rdf:resource="#AlbumListScreen.repaintListAlbum11" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen31" />
+    <owl:onProperty rdf:resource="#AlbumData.getAlbumNames13" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData29" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen17" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen32" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName15" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance23" />
+  </owl:Class>
+  <owl:Class rdf:about="SmsReceiverThread">
+    <owl:onProperty rdf:resource="#SmsMessaging.setSmsReceivePort" />
+    <owl:onProperty rdf:resource="#SmsMessaging.receiveImage" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen18" />
+    <owl:onProperty rdf:resource="#SmsMessaging.cleanUpReceiverConnections" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen19" />
+    <owl:onProperty rdf:resource="#SmsMessaging.cleanUpReceiverConnections2" />
+    <owl:onProperty rdf:resource="#SmsReceiverController.setIncommingData" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen20" />
+  </owl:Class>
+  <owl:Class rdf:about="UnavailablePhotoAlbumException" />
+  <owl:Class rdf:about="MediaController">
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName16" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance24" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen21" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName17" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance25" />
+    <owl:onProperty rdf:resource="#CaptureVideoScreen.setVisibleVideo" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData30" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen33" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController11" />
+    <owl:onProperty rdf:resource="#CaptureVideoScreen.setVisibleVideo2" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData31" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen34" />
+    <owl:onProperty rdf:resource="#PhotoViewController.setCpVideoScreen" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController12" />
+    <owl:onProperty rdf:resource="#AlbumData.addNewMediaToAlbum" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData32" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getItemName3" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen12" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getPath5" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen13" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName3" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData33" />
+    <owl:onProperty rdf:resource="#AlbumData.loadMediaDataFromRMS" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData34" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName4" />
+    <owl:onProperty rdf:resource="#AlbumData.getMediaInfo4" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData35" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getItemName4" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen14" />
+    <owl:onProperty rdf:resource="#AddMediaToAlbum.getItemType" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentScreen15" />
+    <owl:onProperty rdf:resource="#AlbumData.updateMediaInfo" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData36" />
+    <owl:onProperty rdf:resource="#PersistenceMechanismException.getCause6" />
+    <owl:onProperty rdf:resource="#AlbumData.deleteMedia" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData37" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName5" />
+    <owl:onProperty rdf:resource="#MediaListController.showMediaList" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName6" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName18" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance26" />
+    <owl:onProperty rdf:resource="#AlbumData.getMediaInfo5" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData38" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen22" />
+    <owl:onProperty rdf:resource="#MediaListController.showMediaList2" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName7" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName19" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance27" />
+    <owl:onProperty rdf:resource="#AlbumData.getMediaInfo6" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData39" />
+    <owl:onProperty rdf:resource="#MediaData.toggleFavorite" />
+    <owl:onProperty rdf:resource="#MediaData.isFavorite4" />
+    <owl:onProperty rdf:resource="#PersistenceMechanismException.getCause7" />
+    <owl:onProperty rdf:resource="#MediaListController.showMediaList3" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName8" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName20" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance28" />
+    <owl:onProperty rdf:resource="#getLabelName2" />
+    <owl:onProperty rdf:resource="#MediaData.setMediaLabel" />
+    <owl:onProperty rdf:resource="#getLabelName3" />
+    <owl:onProperty rdf:resource="#AlbumData.getMediaInfo7" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData40" />
+    <owl:onProperty rdf:resource="#MusicAlbumData.getMusicFromRecordStore" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData41" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName9" />
+    <owl:onProperty rdf:resource="#MultiMediaData.getTypeMedia2" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData42" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen35" />
+    <owl:onProperty rdf:resource="#MusicPlayController.setMediaName" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController13" />
+    <owl:onProperty rdf:resource="#AlbumData.getMediaInfo8" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData43" />
+    <owl:onProperty rdf:resource="#VideoAlbumData.getVideoFromRecordStore" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData44" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName10" />
+    <owl:onProperty rdf:resource="#MultiMediaData.getTypeMedia3" />
+    <owl:onProperty rdf:resource="#PlayVideoScreen.setVisibleVideo" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData45" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen36" />
+    <owl:onProperty rdf:resource="#PlayVideoController.setMediaName" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController14" />
+    <owl:onProperty rdf:resource="#AlbumData.getMediaInfo9" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData46" />
+    <owl:onProperty rdf:resource="#MediaData.increaseNumberOfViews" />
+    <owl:onProperty rdf:resource="#MediaData.getNumberOfViews5" />
+    <owl:onProperty rdf:resource="#AlbumData.updateMediaInfo2" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData47" />
+    <owl:onProperty rdf:resource="#ImageAlbumData.getImageFromRecordStore" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData48" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName11" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData49" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen37" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController15" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData50" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumListScreen38" />
+    <owl:onProperty rdf:resource="#AbstractController.setNextController16" />
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen23" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getCurrentScreenName2" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance29" />
+    <owl:onProperty rdf:resource="#MediaListController.showMediaList4" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName12" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName21" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance30" />
+    <owl:onProperty rdf:resource="#MediaListController.showMediaList5" />
+    <owl:onProperty rdf:resource="#AbstractController.getCurrentStoreName13" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.setCurrentScreenName22" />
+    <owl:onProperty rdf:resource="#ScreenSingleton.getInstance31" />
+  </owl:Class>
+  <owl:Class rdf:about="MusicAlbumData">
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo10" />
+    <owl:onProperty rdf:resource="#MediaData.getForeignRecordId4" />
+    <owl:onProperty rdf:resource="#MediaData.getParentAlbumName4" />
+    <owl:onProperty rdf:resource="#MediaAccessor.loadMediaBytesFromRMS3" />
+  </owl:Class>
+  <owl:Class rdf:about="ImageAlbumData">
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo11" />
+    <owl:onProperty rdf:resource="#MediaData.getForeignRecordId5" />
+    <owl:onProperty rdf:resource="#MediaData.getParentAlbumName5" />
+    <owl:onProperty rdf:resource="#ImageMediaAccessor.loadSingleImageFromRMS" />
+  </owl:Class>
+  <owl:Class rdf:about="AlbumListScreen" />
+  <owl:Class rdf:about="VideoAlbumData">
+    <owl:onProperty rdf:resource="#MediaAccessor.getMediaInfo12" />
+    <owl:onProperty rdf:resource="#MediaData.getForeignRecordId6" />
+    <owl:onProperty rdf:resource="#MediaData.getParentAlbumName6" />
+    <owl:onProperty rdf:resource="#MediaAccessor.loadMediaBytesFromRMS4" />
+  </owl:Class>
+  <owl:Class rdf:about="SmsSenderController">
+    <owl:onProperty rdf:resource="#AbstractController.setCurrentScreen24" />
+    <owl:onProperty rdf:resource="#AlbumData.getMediaInfo10" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData51" />
+    <owl:onProperty rdf:resource="#AlbumData.loadMediaBytesFromRMS" />
+    <owl:onProperty rdf:resource="#AbstractController.getAlbumData52" />
+    <owl:onProperty rdf:resource="#MediaData.getParentAlbumName7" />
+    <owl:onProperty rdf:resource="#MediaData.getForeignRecordId7" />
+    <owl:onProperty rdf:resource="#MediaData.getMediaLabel8" />
+    <owl:onProperty rdf:resource="#NetworkScreen.getRecPort" />
+    <owl:onProperty rdf:resource="#NetworkScreen.getRecPhoneNum" />
+    <owl:onProperty rdf:resource="#SmsSenderThread.setBinaryData" />
+  </owl:Class>
+  <owl:Class rdf:about="ControllerInterface" />
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName2">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance2">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName3">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance3">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentStoreName">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance4">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getCurrentStoreName">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance5">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setAlbumListAsCurrentScreen">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.deleteAlbum">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getCurrentStoreName2">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance6">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen2">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="getFormType">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#NewLabelScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.createNewAlbum">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData2">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="getLabelName">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#NewLabelScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="getFormType2">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#NewLabelScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PersistenceMechanismException.getCause">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.resetMediaData">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData3">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PersistenceMechanismException.getCause2">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen2">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData4">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen3">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen2">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen4">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.repaintListAlbum">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen5">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames2">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData5">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen3">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen6">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName4">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance7">
+    <rdfs:domain rdf:resource="#AlbumController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.removeRecords">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData2">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData3">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData4">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData5">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData6">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData7">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData8">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData9">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="readMediaAsByteArray">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="getBytesFromMediaInfo">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="getMediaInfoFromBytes">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaArrayOfBytes">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.loadMediaBytesFromRMS">
+    <rdfs:domain rdf:resource="#ImageMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setItemName">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setLabePath">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PhotoViewScreen.isFromSMS">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#PhotoViewScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen3">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setCapturedMedia">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PhotoViewScreen.getImage">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#PhotoViewScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen4">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getCapturedMedia">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen5">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getMediaInfo">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData6">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getItemName">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen6">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getPath">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen7">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.addImageData">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData7">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.addMediaData">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData8">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PersistenceMechanismException.getCause3">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.repaintListAlbum2">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen7">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames3">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData9">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen4">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen8">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName5">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance8">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="CaptureVideoScreen.takePicture">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setItemName2">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setLabePath2">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setCapturedMedia2">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.repaintListAlbum3">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen9">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames4">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData10">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen5">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen10">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName6">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance9">
+    <rdfs:domain rdf:resource="#PhotoViewController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.setFavorite">
+    <rdfs:domain rdf:resource="#MediaUtil" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.setNumberOfViews">
+    <rdfs:domain rdf:resource="#MediaUtil" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.setRecordId">
+    <rdfs:domain rdf:resource="#MediaUtil" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getRecordId">
+    <rdfs:domain rdf:resource="#MediaUtil" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getForeignRecordId">
+    <rdfs:domain rdf:resource="#MediaUtil" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getParentAlbumName">
+    <rdfs:domain rdf:resource="#MediaUtil" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getMediaLabel">
+    <rdfs:domain rdf:resource="#MediaUtil" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.isFavorite">
+    <rdfs:domain rdf:resource="#MediaUtil" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getNumberOfViews">
+    <rdfs:domain rdf:resource="#MediaUtil" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PhotoViewScreen.setImage">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#PhotoViewScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PhotoViewScreen.setFromSMS">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#PhotoViewScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData11">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen11">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen6">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.repaintListAlbum4">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen12">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames5">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData12">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen7">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen13">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName7">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance10">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.repaintListAlbum5">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen14">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames6">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData13">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen8">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen15">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName8">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance11">
+    <rdfs:domain rdf:resource="#SmsReceiverController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="CaptureVideoScreen.startCapture">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="CaptureVideoScreen.pauseCapture">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setItemName3">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setLabePath3">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setCapturedMedia3">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="CaptureVideoScreen.getByteArrays">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getItemName2">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen8">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getPath2">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen9">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.addVideoData">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData14">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getCapturedMedia2">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="CaptureVideoScreen.pauseCapture2">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.repaintListAlbum6">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen16">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames7">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData15">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen9">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen17">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName9">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance12">
+    <rdfs:domain rdf:resource="#VideoCaptureController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="readMediaAsByteArray2">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MusicMediaUtil.getBytesFromMediaInfo">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MusicMediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MusicMediaUtil.getMultiMediaInfoFromBytes">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MusicMediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.removeRecords2">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData10">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData11">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData12">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData13">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData14">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData15">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData16">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.loadMediaDataFromRMS">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.updateMediaInfo">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo2">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.updateMediaInfo2">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo3">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.updateMediaInfo3">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo4">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.updateMediaInfo4">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo5">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.updateMediaInfo5">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo6">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.updateMediaInfo6">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo7">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.updateMediaInfo7">
+    <rdfs:domain rdf:resource="#MusicMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SmsMessaging.sendImage">
+    <rdfs:domain rdf:resource="#SmsSenderThread" />
+    <rdfs:range rdf:resource="#SmsMessaging" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.loadAlbums">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getAlbumNames">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.loadMediaDataFromRMS2">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.createNewAlbum">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.deleteAlbum">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData17">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaData18">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.deleteSingleMediaFromRMS">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.resetRecordStore">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo8">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.loadMediaDataFromRMS3">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.updateMediaInfo8">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.loadMediaBytesFromRMS2">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="VideoMediaAccessor.addVideoData">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#VideoMediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ImageMediaAccessor.addImageData">
+    <rdfs:domain rdf:resource="#AlbumData" />
+    <rdfs:range rdf:resource="#ImageMediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.setRecordId2">
+    <rdfs:domain rdf:resource="#MediaAccessor" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.setRecordId3">
+    <rdfs:domain rdf:resource="#MediaAccessor" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getMediaLabel2">
+    <rdfs:domain rdf:resource="#MediaAccessor" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getParentAlbumName2">
+    <rdfs:domain rdf:resource="#MediaAccessor" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getRecordId2">
+    <rdfs:domain rdf:resource="#MediaAccessor" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getMediaLabel3">
+    <rdfs:domain rdf:resource="#MediaAccessor" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getMediaLabel4">
+    <rdfs:domain rdf:resource="#MediaAccessor" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getForeignRecordId2">
+    <rdfs:domain rdf:resource="#MediaAccessor" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ControllerInterface.handleCommand">
+    <rdfs:domain rdf:resource="#AbstractController" />
+    <rdfs:range rdf:resource="#ControllerInterface" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ControllerInterface.postCommand">
+    <rdfs:domain rdf:resource="#AbstractController" />
+    <rdfs:range rdf:resource="#ControllerInterface" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getCurrentStoreName3">
+    <rdfs:domain rdf:resource="#AbstractController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance13">
+    <rdfs:domain rdf:resource="#AbstractController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames8">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen18">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen19">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.initMenu">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen20">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen10">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen21">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MainUIMidlet.destroyApp">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#MainUIMidlet" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getCurrentScreenName">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance14">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.repaintListAlbum7">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen22">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames9">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData16">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen11">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen23">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName10">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance15">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen12">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getMainMenu">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance16">
+    <rdfs:domain rdf:resource="#BaseController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PlayVideoScreen.startVideo">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#PlayVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PlayVideoScreen.stopVideo">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#PlayVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PlayVideoScreen.stopVideo2">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#PlayVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.repaintListAlbum8">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen24">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames10">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData17">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen13">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen25">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName11">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance17">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setItemName4">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setLabePath4">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getMediaInfo2">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData18">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getPath3">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen10">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.addMediaData2">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData19">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PersistenceMechanismException.getCause4">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.repaintListAlbum9">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen26">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames11">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData20">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen14">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen27">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName12">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance18">
+    <rdfs:domain rdf:resource="#PlayVideoController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="BaseController.init">
+    <rdfs:domain rdf:resource="#SelectMediaController" />
+    <rdfs:range rdf:resource="#BaseController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="BaseController.init2">
+    <rdfs:domain rdf:resource="#SelectMediaController" />
+    <rdfs:range rdf:resource="#BaseController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="BaseController.init3">
+    <rdfs:domain rdf:resource="#SelectMediaController" />
+    <rdfs:range rdf:resource="#BaseController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentStoreName2">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance19">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName13">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance20">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName2">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData21">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen28">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData22">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData23">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData24">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaListScreen.initMenu">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#MediaListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getMedias">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData25">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.isFavorite2">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getMediaLabel5">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getMediaLabel6">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen15">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getNumberOfViews2">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getNumberOfViews3">
+    <rdfs:domain rdf:resource="#MediaListController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getForeignRecordId3">
+    <rdfs:domain rdf:resource="#MultiMediaData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getParentAlbumName3">
+    <rdfs:domain rdf:resource="#MultiMediaData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getMediaLabel7">
+    <rdfs:domain rdf:resource="#MultiMediaData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getRecordId3">
+    <rdfs:domain rdf:resource="#MultiMediaData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.isFavorite3">
+    <rdfs:domain rdf:resource="#MultiMediaData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getNumberOfViews4">
+    <rdfs:domain rdf:resource="#MultiMediaData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.removeRecords3">
+    <rdfs:domain rdf:resource="#VideoMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.loadMediaDataFromRMS4">
+    <rdfs:domain rdf:resource="#VideoMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo9">
+    <rdfs:domain rdf:resource="#VideoMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.updateMediaInfo9">
+    <rdfs:domain rdf:resource="#VideoMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.addMediaArrayOfBytes2">
+    <rdfs:domain rdf:resource="#VideoMediaAccessor" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MultiMediaData.getTypeMedia">
+    <rdfs:domain rdf:resource="#MusicMediaUtil" />
+    <rdfs:range rdf:resource="#MultiMediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController2">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController3">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController4">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController5">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController6">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController7">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController8">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController9">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SelectMediaController.setImageAlbumData">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SelectMediaController.setImageController">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SelectMediaController.setMusicAlbumData">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SelectMediaController.setMusicController">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SelectMediaController.setVideoAlbumData">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SelectMediaController.setVideoController">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController10">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SelectMediaController.setMusicAlbumData2">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SelectMediaController.setMusicController2">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SelectMediaController.setVideoAlbumData2">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SelectMediaController.setVideoController2">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SelectTypeOfMedia.initMenu">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#SelectTypeOfMedia" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setMainMenu">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance21">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="BaseController.init4">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#BaseController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="BaseController.init5">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#BaseController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="BaseController.init6">
+    <rdfs:domain rdf:resource="#MainUIMidlet" />
+    <rdfs:range rdf:resource="#BaseController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PlayMediaScreen.startPlay">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#PlayMediaScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PlayMediaScreen.pausePlay">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#PlayMediaScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PlayMediaScreen.pausePlay2">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#PlayMediaScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.repaintListAlbum10">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen29">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames12">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData26">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen16">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen30">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName14">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance22">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setItemName5">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.setLabePath5">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getMediaInfo3">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData27">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getPath4">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen11">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.addMediaData3">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData28">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PersistenceMechanismException.getCause5">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumListScreen.repaintListAlbum11">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen31">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getAlbumNames13">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData29">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen17">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen32">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName15">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance23">
+    <rdfs:domain rdf:resource="#MusicPlayController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SmsMessaging.setSmsReceivePort">
+    <rdfs:domain rdf:resource="#SmsReceiverThread" />
+    <rdfs:range rdf:resource="#SmsMessaging" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SmsMessaging.receiveImage">
+    <rdfs:domain rdf:resource="#SmsReceiverThread" />
+    <rdfs:range rdf:resource="#SmsMessaging" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen18">
+    <rdfs:domain rdf:resource="#SmsReceiverThread" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SmsMessaging.cleanUpReceiverConnections">
+    <rdfs:domain rdf:resource="#SmsReceiverThread" />
+    <rdfs:range rdf:resource="#SmsMessaging" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen19">
+    <rdfs:domain rdf:resource="#SmsReceiverThread" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SmsMessaging.cleanUpReceiverConnections2">
+    <rdfs:domain rdf:resource="#SmsReceiverThread" />
+    <rdfs:range rdf:resource="#SmsMessaging" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SmsReceiverController.setIncommingData">
+    <rdfs:domain rdf:resource="#SmsReceiverThread" />
+    <rdfs:range rdf:resource="#SmsReceiverController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen20">
+    <rdfs:domain rdf:resource="#SmsReceiverThread" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName16">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance24">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen21">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName17">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance25">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="CaptureVideoScreen.setVisibleVideo">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData30">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen33">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController11">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="CaptureVideoScreen.setVisibleVideo2">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData31">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen34">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PhotoViewController.setCpVideoScreen">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#PhotoViewController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController12">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.addNewMediaToAlbum">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData32">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getItemName3">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen12">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getPath5">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen13">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName3">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData33">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.loadMediaDataFromRMS">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData34">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName4">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getMediaInfo4">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData35">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getItemName4">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen14">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AddMediaToAlbum.getItemType">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentScreen15">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.updateMediaInfo">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData36">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PersistenceMechanismException.getCause6">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.deleteMedia">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData37">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName5">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaListController.showMediaList">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MediaListController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName6">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName18">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance26">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getMediaInfo5">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData38">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen22">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaListController.showMediaList2">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MediaListController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName7">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName19">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance27">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getMediaInfo6">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData39">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.toggleFavorite">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.isFavorite4">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PersistenceMechanismException.getCause7">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaListController.showMediaList3">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MediaListController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName8">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName20">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance28">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="getLabelName2">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#NewLabelScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.setMediaLabel">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="getLabelName3">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#NewLabelScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getMediaInfo7">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData40">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MusicAlbumData.getMusicFromRecordStore">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MusicAlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData41">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName9">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MultiMediaData.getTypeMedia2">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MultiMediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData42">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen35">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MusicPlayController.setMediaName">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MusicPlayController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController13">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getMediaInfo8">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData43">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="VideoAlbumData.getVideoFromRecordStore">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#VideoAlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData44">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName10">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MultiMediaData.getTypeMedia3">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MultiMediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PlayVideoScreen.setVisibleVideo">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#PlayVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData45">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen36">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="PlayVideoController.setMediaName">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#PlayVideoController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController14">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getMediaInfo9">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData46">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.increaseNumberOfViews">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getNumberOfViews5">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.updateMediaInfo2">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData47">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ImageAlbumData.getImageFromRecordStore">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ImageAlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData48">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName11">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData49">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen37">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController15">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData50">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumListScreen38">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setNextController16">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen23">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getCurrentScreenName2">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance29">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaListController.showMediaList4">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MediaListController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName12">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName21">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance30">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaListController.showMediaList5">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#MediaListController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getCurrentStoreName13">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.setCurrentScreenName22">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ScreenSingleton.getInstance31">
+    <rdfs:domain rdf:resource="#MediaController" />
+    <rdfs:range rdf:resource="#ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo10">
+    <rdfs:domain rdf:resource="#MusicAlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getForeignRecordId4">
+    <rdfs:domain rdf:resource="#MusicAlbumData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getParentAlbumName4">
+    <rdfs:domain rdf:resource="#MusicAlbumData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.loadMediaBytesFromRMS3">
+    <rdfs:domain rdf:resource="#MusicAlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo11">
+    <rdfs:domain rdf:resource="#ImageAlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getForeignRecordId5">
+    <rdfs:domain rdf:resource="#ImageAlbumData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getParentAlbumName5">
+    <rdfs:domain rdf:resource="#ImageAlbumData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ImageMediaAccessor.loadSingleImageFromRMS">
+    <rdfs:domain rdf:resource="#ImageAlbumData" />
+    <rdfs:range rdf:resource="#ImageMediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.getMediaInfo12">
+    <rdfs:domain rdf:resource="#VideoAlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getForeignRecordId6">
+    <rdfs:domain rdf:resource="#VideoAlbumData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getParentAlbumName6">
+    <rdfs:domain rdf:resource="#VideoAlbumData" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaAccessor.loadMediaBytesFromRMS4">
+    <rdfs:domain rdf:resource="#VideoAlbumData" />
+    <rdfs:range rdf:resource="#MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.setCurrentScreen24">
+    <rdfs:domain rdf:resource="#SmsSenderController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.getMediaInfo10">
+    <rdfs:domain rdf:resource="#SmsSenderController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData51">
+    <rdfs:domain rdf:resource="#SmsSenderController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AlbumData.loadMediaBytesFromRMS">
+    <rdfs:domain rdf:resource="#SmsSenderController" />
+    <rdfs:range rdf:resource="#AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="AbstractController.getAlbumData52">
+    <rdfs:domain rdf:resource="#SmsSenderController" />
+    <rdfs:range rdf:resource="#AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getParentAlbumName7">
+    <rdfs:domain rdf:resource="#SmsSenderController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getForeignRecordId7">
+    <rdfs:domain rdf:resource="#SmsSenderController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="MediaData.getMediaLabel8">
+    <rdfs:domain rdf:resource="#SmsSenderController" />
+    <rdfs:range rdf:resource="#MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="NetworkScreen.getRecPort">
+    <rdfs:domain rdf:resource="#SmsSenderController" />
+    <rdfs:range rdf:resource="#NetworkScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="NetworkScreen.getRecPhoneNum">
+    <rdfs:domain rdf:resource="#SmsSenderController" />
+    <rdfs:range rdf:resource="#NetworkScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="SmsSenderThread.setBinaryData">
+    <rdfs:domain rdf:resource="#SmsSenderController" />
+    <rdfs:range rdf:resource="#SmsSenderThread" />
+  </owl:ObjectProperty>
+</rdf:RDF>

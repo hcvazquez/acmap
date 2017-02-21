@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+  xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>**</type>
+  <onto1>file:/C:/benchmarks/ontoarchdiagram.rdf</onto1>
+  <onto2>file:/C:/benchmarks/ontojavacode2.rdf</onto2>
+  <uri1>file:/C:/benchmarks/ontoarchdiagram.rdf</uri1>
+  <uri2>file:/C:/benchmarks/ontojavacode2.rdf</uri2>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/BaseController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/BaseController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/AlbumVideoData'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/VideoAlbumData'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/MediaListController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/MediaListController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/AlbumController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/AlbumController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/AlbumListScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/AlbumListScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/CaptureMediaController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/VideoCaptureController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/PlayVideoScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/PlayVideoScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/CaptureMediaScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/PlayMediaScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/PhotoViewController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/PhotoViewController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/MediaController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/MediaController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/NewLabelScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/NewLabelScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/NetworkScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/NetworkScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/PlayMusicController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/MusicPlayController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/MediaListScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/MediaListScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/PlayVideoController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/PlayVideoController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/PhotoViewScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/PhotoViewScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/AlbumMusicData'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/MusicAlbumData'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageAlbumListRequired3'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumListScreen.initMenu'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ControlSMSRequired1'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#BaseController.init3'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ControlSMSRequired1'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#BaseController.init'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ControlSMSRequired1'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#BaseController.init2'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required8'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageAlbumListRequired2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumListScreen.repaintListAlbum9'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageAlbumListRequired2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumListScreen.repaintListAlbum8'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaRequired3'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AddMediaToAlbum.getPath4'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#HandleCommand1Required'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#ControllerInterface.handleCommand'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required9'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo3'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required8'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageLabelRequired1'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#getLabelName'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required4'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo10'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaListRequired'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#MediaListScreen.initMenu'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#PersistVideoRequired'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#MediaAccessor.getMediaInfo12'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required4'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo10'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageVideoRequired'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#PlayMediaScreen.startPlay'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageVideoRequired'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#PlayMediaScreen.pausePlay2'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageVideoRequired'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#PlayMediaScreen.pausePlay'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageAlbumListRequired4'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumListScreen.repaintListAlbum10'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageAlbumListRequired4'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumListScreen.repaintListAlbum11'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo6'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo9'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo7'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo4'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo5'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo8'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required8'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required9'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo3'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageLabelRequired2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#getLabelName3'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageLabelRequired2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#getLabelName2'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo6'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo9'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo7'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo4'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo5'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo8'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required4'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo10'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo2'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required9'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo3'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageSMSRequired1'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#PhotoViewScreen.isFromSMS'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaRequired1'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AddMediaToAlbum.getPath5'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo2'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo2'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageAlbumListRequired1'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumListScreen.initMenu'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageAlbumListRequired5'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumListScreen.repaintListAlbum'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaRequired2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AddMediaToAlbum.getPath'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaRequired2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AddMediaToAlbum.getCapturedMedia'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo6'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo9'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo7'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo4'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo5'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode2.rdf#AlbumData.getMediaInfo8'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map></Alignment>
+</rdf:RDF>

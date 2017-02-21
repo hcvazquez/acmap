@@ -1,0 +1,2044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+          <!ENTITY xsd		"http://www.w3.org/2001/XMLSchema#" >
+	  <!ENTITY rdf		"http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	  <!ENTITY rdfs		"http://www.w3.org/2000/01/rdf-schema#" >
+	  <!ENTITY dc		"http://purl.org/dc/elements/1.1/" >
+	  <!ENTITY owl		"http://www.w3.org/2002/07/owl#" >
+	  <!ENTITY foaf 	"http://xmlns.com/foaf/0.1/">
+	  <!ENTITY ical 	"http://www.w3.org/2002/12/cal/ical#">]>
+
+
+<rdf:RDF
+ xmlns:rdf	="&rdf;"
+ xmlns:rdfs	="&rdfs;"
+ xmlns:owl	="http://www.w3.org/2002/07/owl#"
+ xmlns:dc	="&dc;">
+
+ <owl:Class rdf:about="HibernateUtil" />
+  <owl:Class rdf:about="EditDonation">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>MD</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getDonor" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getDate" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getMeansOfPayment" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getAmount" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.setAmount" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.setDate" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.setMeansOfPayment" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.updateDonation" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance" />
+    <owl:onProperty rdf:resource="#ui.search.SearchDonationsResults.updateSearchValue" />
+  </owl:Class>
+  <owl:Class rdf:about="AssociatedField">
+  	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ML</rdfs:label>
+  </owl:Class> 
+  <owl:Class rdf:about="SearchCriteriaForBoolean" />
+  <owl:Class rdf:about="AddPersonToEvent">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ME</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.eventHasInstanceDate" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance2" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.setEvent" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.setDate" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.saveEntity" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getAssitedToEvents" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listEventsIntancesForEvenr" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.getDate" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listEvents" />
+    <owl:onProperty rdf:resource="#bd.pojos.Event.getName" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.getEvent" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.updatePerson" />
+  </owl:Class>
+  <owl:Class rdf:about="PasswordDialog">
+    <owl:onProperty rdf:resource="#ui.MainWindowKolbe.startApplication" />
+  </owl:Class>
+  <owl:Class rdf:about="CriteriaCreationPanelForField" />
+  <owl:Class rdf:about="AddPersonFrame">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ML</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listPersons" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.hasLabel" />
+    <owl:onProperty rdf:resource="#ui.search.Searchresults.orderPersonsByDeliveryZone" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getLabel" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getAssociatedFieldValuesForLabel" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.getAssociatedFields" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getName" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFamilyName" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.getValueOfField" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setName" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setFamilyName" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setGender" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setBirthDate" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setCivilState" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setPhone" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setCellPhone" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setEmail" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setWork" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setNotes" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setStreet" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setHouseNumber" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setHouse" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setNeighborhood" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setFloor" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setFlatNumber" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setPostalNumber" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setCity" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setProvince" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setCountry" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setReceivesMagazine" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setNumberOfPersons" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setCommentOfLabel" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setSector" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.isReceivesMagazine" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setDistributor" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setNumberOfLabels" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setNumberOfCopies" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setKindOfShipping" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.saveEntity2" />
+  </owl:Class>
+  <owl:Class rdf:about="MailLabel">
+	<rdfs:label>CM</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="HSQLServer" />
+  <owl:Class rdf:about="SimpleDatePanelForLabel">
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedField.getName" />
+  </owl:Class>
+  <owl:Class rdf:about="SimpleComboBoxCreationPanel" />
+  <owl:Class rdf:about="DocxFilter">
+  	<rdfs:label>CM</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="EditLabels">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ML</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.updateLabel" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance4" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.deleteLabel" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listLabels" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.isEliminable" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.getName" />
+  </owl:Class>
+  <owl:Class rdf:about="AssociatedFieldValueForSearch" />
+  <owl:Class rdf:about="PDFPrintPage2">
+	<rdfs:label>CM</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Person">
+	<rdfs:label>MS</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Label.equals" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.getLabel" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.getAssociatedField" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.getName2" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.getEvent2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.getAssociatedFields2" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.getId" />
+  </owl:Class>
+  <owl:Class rdf:about="AddLabel">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ML</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Label.setName" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedField.setType" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.setAssociatedFields" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.setEliminable" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.saveEntity3" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance5" />
+  </owl:Class>
+  <owl:Class rdf:about="SearchCriteriaForDonation">
+	<rdfs:label>MD</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listDonationsForPersonBetweenDates" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance6" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getDate2" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listDonationsForPerson" />
+    <owl:onProperty rdf:resource="#ui.search.SearchPerson.setDonationsOfLastSearch" />
+  </owl:Class>
+  <owl:Class rdf:about="SimpleFieldCreationPanel" />
+  <owl:Class rdf:about="CriteriaCreationPanel" />
+  <owl:Class rdf:about="ModifyEventInstanceDate">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ME</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.getDate2" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.setDate2" />
+    <owl:onProperty rdf:resource="#ui.edit.EditEvents.comboOfEventsChanged" />
+  </owl:Class>
+  <owl:Class rdf:about="JasperReportBuilder">
+	<rdfs:label>CM</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="OpenOrPrintFileDialog">
+ 	<rdfs:label>CM</rdfs:label>
+    <owl:onProperty rdf:resource="#ui.mailing.CreateLetterDialog.printFile" />
+  </owl:Class>
+  <owl:Class rdf:about="Merge">
+	<rdfs:label>CM</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="SimpleDateCreationPanel" />
+  <owl:Class rdf:about="AssociatedFieldPanelForLabel">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ML</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="EditPassword">
+	<rdfs:label>MS</rdfs:label>
+  </owl:Class>  
+  <owl:Class rdf:about="PDFPrintPage" />
+  <owl:Class rdf:about="PrintLetterTask">
+    <owl:onProperty rdf:resource="#ui.mailing.CreateLetterDialog.getModifiedPdfFiles" />
+    <owl:onProperty rdf:resource="#ui.mailing.CreateLetterDialog.cancelCliked" />
+  </owl:Class>
+  <owl:Class rdf:about="SearchPerson">
+    <rdfs:label>MS</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listPersons2" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance7" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.donation.CriteriaCreationPanelForDonation.createSearchCriteria" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.searchCriteria.SearchCriteria.isCriteriaToQuery" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.searchCriteria.SearchCriteriaToQuery.getCriterion" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listPerson" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.searchCriteria.SearchCriteria.isCriteriaToFilter" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.searchCriteria.SearchCriteriaToFilter.filterListOfPersons" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.searchCriteria.SearchCriteria.isFieldCriteria" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.searchCriteria.SearchCriteriaForField.getField" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.searchCriteria.SearchCriteria.isLabelCriteria" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.searchCriteria.SearchCriteriaForLabel.getLabel" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.searchCriteria.SearchCriteria.isEventCriteria" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.searchCriteria.SearchCriteria.isDonationCriteria" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listLabels2" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listEvents2" />
+  </owl:Class>
+  <owl:Class rdf:about="Event" >
+  	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ME</rdfs:label>
+  </owl:Class>  
+  <owl:Class rdf:about="ModifyEventName">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ME</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Event.getName2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Event.setName" />
+    <owl:onProperty rdf:resource="#ui.edit.EditEvents.createComboBoxModelOfEvents" />
+  </owl:Class>
+  <owl:Class rdf:about="PrintPdf">
+	<rdfs:label>CM</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="SendByEmailTask">
+    <owl:onProperty rdf:resource="#ui.mailing.CreateLetterDialog.getModifiedPdfFiles2" />
+    <owl:onProperty rdf:resource="#ui.mailing.CreateLetterDialog.sendByEmailFile" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getEmail" />
+    <owl:onProperty rdf:resource="#ui.mailing.CreateLetterDialog.cancelCliked2" />
+  </owl:Class>
+  <owl:Class rdf:about="SimpleBooleanCreationPanel" />
+  <owl:Class rdf:about="SearchDonationsResults">
+	<rdfs:label>MD</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getName2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getDonor2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFamilyName2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getDate3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getAmount2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getMeansOfPayment2" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.deleteDonation" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance8" />
+  </owl:Class>
+  <owl:Class rdf:about="SearchCriteriaToFilter" />
+  <owl:Class rdf:about="SearchCriteriaDateOnlyForMonthAndDay" />
+  <owl:Class rdf:about="SearchCriteriaForEvent">
+	<rdfs:label>ME</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Person.assistToEventInstance" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.assistToEvent" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.toString" />
+  </owl:Class>
+  <owl:Class rdf:about="SimpleDatePanelForLabel">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ML</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedField.getName2" />
+  </owl:Class>
+  <owl:Class rdf:about="SearchCriteriaForField" />
+  <owl:Class rdf:about="SearchCriteria" />
+  <owl:Class rdf:about="Label" >
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ML</rdfs:label>
+  </owl:Class>  
+  <owl:Class rdf:about="MonthEqExpression" />
+  <owl:Class rdf:about="AssociatedFieldValueForLabel">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ML</rdfs:label>
+  </owl:Class>  
+  <owl:Class rdf:about="DataBaseManager">
+  	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>MD</rdfs:label>
+	<rdfs:label>ME</rdfs:label>
+	<rdfs:label>ML</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.HSQLServer.startDatabase" />
+    <owl:onProperty rdf:resource="#bd.HSQLServer.getInstance" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.setName2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.setEliminable2" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedField.setType2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.setAssociatedFields2" />
+    <owl:onProperty rdf:resource="#bd.HibernateUtil.getSessionFactory" />
+    <owl:onProperty rdf:resource="#bd.pojos.Event.getId" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.getName3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.getAssociatedFields3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.removeLabelsAndAssociatedFields" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setAssitedToEvents" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getAssitedToEvents2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getAssociatedFieldValues" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.setAssociatedField" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.getAssociatedField2" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.setLabel" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.getLabel2" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.setValueOfField" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.getValueOfField2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setBirthDate2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getBirthDate" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setCellPhone2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCellPhone" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setCity2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCity" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setCivilState2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCivilState" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setCountry2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCountry" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setDistributor2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getDistributor" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setEmail2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getEmail2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setFamilyName2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFamilyName3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setFlatNumber2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFlatNumber" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setFloor2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFloor" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setGender2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getGender" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setHouse2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getHouse" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setHouseNumber2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getHouseNumber" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setKindOfShipping2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getKindOfShipping" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setLabels" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getLabels" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setNeighborhood2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNeighborhood" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setNotes2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNotes" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setNumberOfCopies2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNumberOfCopies" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setNumberOfLabels2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNumberOfLabels" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setCommentOfLabel2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCommentOfLabel" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setNumberOfPersons2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNumberOfPersons" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setPhone2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getPhone" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setPostalNumber2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getPostalNumber" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setProvince2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getProvince" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setReceivesMagazine2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.isReceivesMagazine2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setStreet2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getStreet" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setWork2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getWork" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setSector2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getSector" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.setDate3" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.getDate3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.removeEventInstance" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.setAmount2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getAmount3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.setMeansOfPayment2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getMeansOfPayment3" />
+  </owl:Class>
+  <owl:Class rdf:about="Searchresults">
+    <owl:onProperty rdf:resource="#bd.pojos.Person.hasLabel2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getName3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFamilyName4" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listDonationsForPerson2" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance9" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getDate4" />
+    <owl:onProperty rdf:resource="#ui.mailing.MailLabel.setFamilyNameAndName" />
+    <owl:onProperty rdf:resource="#ui.mailing.MailLabel.setCpAndCity" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getPostalNumber2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCity2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getHouse2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNeighborhood2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFloor2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFlatNumber2" />
+    <owl:onProperty rdf:resource="#ui.mailing.MailLabel.setHouseNeighborhoodFloorFlatNumber" />
+    <owl:onProperty rdf:resource="#ui.mailing.MailLabel.setProvinceAndCountry" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getProvince2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCountry2" />
+    <owl:onProperty rdf:resource="#ui.mailing.MailLabel.setStreetAndHouseNumber" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getStreet2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getHouseNumber2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getDistributor2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getLabel2" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.getValueOfField3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getAssociatedFieldValuesForLabel2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.getAssociatedFields4" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNumberOfCopies2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getKindOfShipping2" />
+    <owl:onProperty rdf:resource="#ui.mailing.MailLabel.setZoneAndDistributor" />
+    <owl:onProperty rdf:resource="#ui.mailing.MailLabel.setCommentOfLabel" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCommentOfLabel2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNumberOfLabels2" />
+    <owl:onProperty rdf:resource="#ui.mailing.JasperReportBuilder.createReport" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getPhone2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCellPhone2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getEmail3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.isReceivesMagazine3" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getLastDonation" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getAmount4" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getSector2" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listDonationsForPersonBetweenDates2" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.peopleWhoDistributed" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.deletePerson" />
+  </owl:Class>
+  <owl:Class rdf:about="CriteriaCreationPanelForLabel">
+    <owl:onProperty rdf:resource="#bd.pojos.Label.getAssociatedFields5" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedField.getType" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.labels.internalPanels.AssociatedFieldPanelForLabel.setEnableAllComponents" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.labels.internalPanels.AssociatedFieldPanelForLabel.getAssociatedValues" />
+  </owl:Class>
+  <owl:Class rdf:about="SearchCriteriaForLabel">
+	<rdfs:label>ML</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Person.hasLabel3" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedField.getType2" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueForSearch.getAssociatedField" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.getMonth" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.isCompleteDate" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.getDay" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.getYear" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueForSearch.isEqual" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getAssociatedFieldValuesForLabel3" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.getValueOfField4" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.isJustMonthAndDay" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.isJustMonth" />
+    <owl:onProperty rdf:resource="#ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueStringForSearch.getValue" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.getName4" />
+  </owl:Class>
+  <owl:Class rdf:about="MainWindowKolbe">
+    <owl:onProperty rdf:resource="#bd.HSQLServer.stopFatabase" />
+    <owl:onProperty rdf:resource="#bd.HSQLServer.getInstance2" />
+  </owl:Class>
+  <owl:Class rdf:about="AssociatedFieldPanelForLabel">
+ 	<rdfs:label>ML</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="SearchCriteriaToQuery" />
+  <owl:Class rdf:about="SearchCriteriaDate" />
+  <owl:Class rdf:about="EditEvents">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ME</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.updateEvent" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance10" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.updateEventInstance" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.deleteEventIntance" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.deleteEvent" />
+    <owl:onProperty rdf:resource="#bd.pojos.Event.getId2" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.getEvent3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Event.getName3" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listEvents3" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listEventsIntancesForEvenr2" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.getDate4" />
+  </owl:Class>
+  <owl:Class rdf:about="SimpleFieldPanelForLabel">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ML</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedField.getName3" />
+  </owl:Class>
+  <owl:Class rdf:about="CriteriaCreationPanelForEvent">
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listEventsIntancesForEvenr3" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance11" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.getDate5" />
+  </owl:Class>
+  <owl:Class rdf:about="EditLabelsForPerson">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ML</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Label.getAssociatedFields6" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.setLabel2" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.setAssociatedField2" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.setValueOfField2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setLabels2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.setAssociatedFieldValues" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedField.getName4" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedField.getType3" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listLabels3" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance12" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getLabels2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getAssociatedFieldValuesForLabel4" />
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedFieldValueForLabel.getValueOfField5" />
+    <owl:onProperty rdf:resource="#ui.add.label.modifyAssociationField.AssociatedFieldPanelForLabel.getValue" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getId" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.peopleWhoDistributed2" />
+  </owl:Class>
+  <owl:Class rdf:about="SearchCriteriaForSimpleField" />
+  <owl:Class rdf:about="AssociatedFieldValueDateForSearch" />
+  <owl:Class rdf:about="DayMonthAndYearEqExpression" />
+  <owl:Class rdf:about="SearchDonations">
+	<rdfs:label>MD</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listDonationsBetweenDates" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance13" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getDate5" />
+  </owl:Class>
+  <owl:Class rdf:about="Donation" >
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>MD</rdfs:label>
+  </owl:Class>  
+  <owl:Class rdf:about="DayAndMonthEqExpression" />
+  <owl:Class rdf:about="AssociatedFieldValueStringForSearch" />
+  <owl:Class rdf:about="CriteriaCreationPanelForDonation" />
+  <owl:Class rdf:about="AddEvent">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ME</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.eventHasInstanceDate2" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance14" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.setEvent2" />
+    <owl:onProperty rdf:resource="#bd.pojos.EventInstance.setDate4" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.saveEntity4" />
+    <owl:onProperty rdf:resource="#bd.pojos.Event.setName2" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.listEvents4" />
+    <owl:onProperty rdf:resource="#bd.pojos.Event.getName4" />
+  </owl:Class>
+  <owl:Class rdf:about="SimpleFieldPanelForLabel">
+    <owl:onProperty rdf:resource="#bd.pojos.AssociatedField.getName5" />
+  </owl:Class>
+  <owl:Class rdf:about="CreateLetterDialog">
+	<rdfs:label>CM</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getGender2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNumberOfPersons2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getName4" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFamilyName5" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.getAmount5" />
+  </owl:Class>
+  <owl:Class rdf:about="ModifyLabelName">
+	<rdfs:label>MS</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Label.getName5" />
+    <owl:onProperty rdf:resource="#bd.pojos.Label.setName3" />
+    <owl:onProperty rdf:resource="#ui.edit.EditLabels.createComboBoxModelOfLabels" />
+  </owl:Class>
+  <owl:Class rdf:about="EventInstance">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>ME</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Event.equals" />
+    <owl:onProperty rdf:resource="#bd.pojos.Event.getName5" />
+  </owl:Class>
+  <owl:Class rdf:about="EditPerson">
+	<rdfs:label>MS</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getName5" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFamilyName6" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getGender3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getBirthDate2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCivilState2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getPhone3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCellPhone3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getEmail4" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getWork2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNotes2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getStreet3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getHouseNumber3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getHouse3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNeighborhood3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFloor3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFlatNumber3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getPostalNumber3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCity3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getProvince3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCountry3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getCommentOfLabel3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getSector3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.isReceivesMagazine4" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNumberOfPersons3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNumberOfLabels3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getNumberOfCopies3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getKindOfShipping3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getDistributor3" />
+    <owl:onProperty rdf:resource="#ui.add.AddPersonFrame.checkBoxSendMagazineChanged" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.updatePerson2" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance15" />
+    <owl:onProperty rdf:resource="#ui.search.Searchresults.updateSearchValue" />
+  </owl:Class>
+  <owl:Class rdf:about="SearchCriteriaDateOnlyForMonth" />
+  <owl:Class rdf:about="AddDonation">
+	<rdfs:label>MS</rdfs:label>
+	<rdfs:label>MD</rdfs:label>
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getName6" />
+    <owl:onProperty rdf:resource="#bd.pojos.Person.getFamilyName7" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.setAmount3" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.setDate2" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.setDonor" />
+    <owl:onProperty rdf:resource="#bd.pojos.Donation.setMeansOfPayment3" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.saveEntity5" />
+    <owl:onProperty rdf:resource="#bd.DataBaseManager.getInstance16" />
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getDonor">
+    <rdfs:domain rdf:resource="EditDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getDate">
+    <rdfs:domain rdf:resource="EditDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getMeansOfPayment">
+    <rdfs:domain rdf:resource="EditDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getAmount">
+    <rdfs:domain rdf:resource="EditDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.setAmount">
+    <rdfs:domain rdf:resource="EditDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.setDate">
+    <rdfs:domain rdf:resource="EditDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.setMeansOfPayment">
+    <rdfs:domain rdf:resource="EditDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.updateDonation">
+    <rdfs:domain rdf:resource="EditDonation" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance">
+    <rdfs:domain rdf:resource="EditDonation" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.SearchDonationsResults.updateSearchValue">
+    <rdfs:domain rdf:resource="EditDonation" />
+    <rdfs:range rdf:resource="SearchDonationsResults" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.eventHasInstanceDate">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance2">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.setEvent">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.setDate">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.saveEntity">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getAssitedToEvents">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listEventsIntancesForEvenr">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.getDate">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listEvents">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Event.getName">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.getEvent">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.updatePerson">
+    <rdfs:domain rdf:resource="AddPersonToEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.MainWindowKolbe.startApplication">
+    <rdfs:domain rdf:resource="PasswordDialog" />
+    <rdfs:range rdf:resource="MainWindowKolbe" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listPersons">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance3">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.hasLabel">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.Searchresults.orderPersonsByDeliveryZone">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Searchresults" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getLabel">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getAssociatedFieldValuesForLabel">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.getAssociatedFields">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getName">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFamilyName">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.getValueOfField">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setName">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setFamilyName">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setGender">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setBirthDate">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setCivilState">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setPhone">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setCellPhone">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setEmail">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setWork">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setNotes">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setStreet">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setHouseNumber">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setHouse">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setNeighborhood">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setFloor">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setFlatNumber">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setPostalNumber">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setCity">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setProvince">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setCountry">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setReceivesMagazine">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setNumberOfPersons">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setCommentOfLabel">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setSector">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.isReceivesMagazine">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setDistributor">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setNumberOfLabels">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setNumberOfCopies">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setKindOfShipping">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.saveEntity2">
+    <rdfs:domain rdf:resource="AddPersonFrame" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedField.getName">
+    <rdfs:domain rdf:resource="SimpleDatePanelForLabel" />
+    <rdfs:range rdf:resource="AssociatedField" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.updateLabel">
+    <rdfs:domain rdf:resource="EditLabels" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance4">
+    <rdfs:domain rdf:resource="EditLabels" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.deleteLabel">
+    <rdfs:domain rdf:resource="EditLabels" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listLabels">
+    <rdfs:domain rdf:resource="EditLabels" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.isEliminable">
+    <rdfs:domain rdf:resource="EditLabels" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.getName">
+    <rdfs:domain rdf:resource="EditLabels" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.equals">
+    <rdfs:domain rdf:resource="Person" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.getLabel">
+    <rdfs:domain rdf:resource="Person" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.getAssociatedField">
+    <rdfs:domain rdf:resource="Person" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.getName2">
+    <rdfs:domain rdf:resource="Person" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.getEvent2">
+    <rdfs:domain rdf:resource="Person" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.getAssociatedFields2">
+    <rdfs:domain rdf:resource="Person" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.getId">
+    <rdfs:domain rdf:resource="Person" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.setName">
+    <rdfs:domain rdf:resource="AddLabel" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedField.setType">
+    <rdfs:domain rdf:resource="AddLabel" />
+    <rdfs:range rdf:resource="AssociatedField" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.setAssociatedFields">
+    <rdfs:domain rdf:resource="AddLabel" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.setEliminable">
+    <rdfs:domain rdf:resource="AddLabel" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.saveEntity3">
+    <rdfs:domain rdf:resource="AddLabel" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance5">
+    <rdfs:domain rdf:resource="AddLabel" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listDonationsForPersonBetweenDates">
+    <rdfs:domain rdf:resource="SearchCriteriaForDonation" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance6">
+    <rdfs:domain rdf:resource="SearchCriteriaForDonation" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getDate2">
+    <rdfs:domain rdf:resource="SearchCriteriaForDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listDonationsForPerson">
+    <rdfs:domain rdf:resource="SearchCriteriaForDonation" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.SearchPerson.setDonationsOfLastSearch">
+    <rdfs:domain rdf:resource="SearchCriteriaForDonation" />
+    <rdfs:range rdf:resource="SearchPerson" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.getDate2">
+    <rdfs:domain rdf:resource="ModifyEventInstanceDate" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.setDate2">
+    <rdfs:domain rdf:resource="ModifyEventInstanceDate" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.edit.EditEvents.comboOfEventsChanged">
+    <rdfs:domain rdf:resource="ModifyEventInstanceDate" />
+    <rdfs:range rdf:resource="EditEvents" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.CreateLetterDialog.printFile">
+    <rdfs:domain rdf:resource="OpenOrPrintFileDialog" />
+    <rdfs:range rdf:resource="CreateLetterDialog" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.CreateLetterDialog.getModifiedPdfFiles">
+    <rdfs:domain rdf:resource="PrintLetterTask" />
+    <rdfs:range rdf:resource="CreateLetterDialog" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.CreateLetterDialog.cancelCliked">
+    <rdfs:domain rdf:resource="PrintLetterTask" />
+    <rdfs:range rdf:resource="CreateLetterDialog" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listPersons2">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance7">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.donation.CriteriaCreationPanelForDonation.createSearchCriteria">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="CriteriaCreationPanelForDonation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.searchCriteria.SearchCriteria.isCriteriaToQuery">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="SearchCriteria" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.searchCriteria.SearchCriteriaToQuery.getCriterion">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="SearchCriteriaToQuery" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listPerson">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.searchCriteria.SearchCriteria.isCriteriaToFilter">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="SearchCriteria" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.searchCriteria.SearchCriteriaToFilter.filterListOfPersons">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="SearchCriteriaToFilter" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.searchCriteria.SearchCriteria.isFieldCriteria">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="SearchCriteria" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.searchCriteria.SearchCriteriaForField.getField">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="SearchCriteriaForField" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.searchCriteria.SearchCriteria.isLabelCriteria">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="SearchCriteria" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.searchCriteria.SearchCriteriaForLabel.getLabel">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="SearchCriteriaForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.searchCriteria.SearchCriteria.isEventCriteria">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="SearchCriteria" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.searchCriteria.SearchCriteria.isDonationCriteria">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="SearchCriteria" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listLabels2">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listEvents2">
+    <rdfs:domain rdf:resource="SearchPerson" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Event.getName2">
+    <rdfs:domain rdf:resource="ModifyEventName" />
+    <rdfs:range rdf:resource="Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Event.setName">
+    <rdfs:domain rdf:resource="ModifyEventName" />
+    <rdfs:range rdf:resource="Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.edit.EditEvents.createComboBoxModelOfEvents">
+    <rdfs:domain rdf:resource="ModifyEventName" />
+    <rdfs:range rdf:resource="EditEvents" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.CreateLetterDialog.getModifiedPdfFiles2">
+    <rdfs:domain rdf:resource="SendByEmailTask" />
+    <rdfs:range rdf:resource="CreateLetterDialog" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.CreateLetterDialog.sendByEmailFile">
+    <rdfs:domain rdf:resource="SendByEmailTask" />
+    <rdfs:range rdf:resource="CreateLetterDialog" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getEmail">
+    <rdfs:domain rdf:resource="SendByEmailTask" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.CreateLetterDialog.cancelCliked2">
+    <rdfs:domain rdf:resource="SendByEmailTask" />
+    <rdfs:range rdf:resource="CreateLetterDialog" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getName2">
+    <rdfs:domain rdf:resource="SearchDonationsResults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getDonor2">
+    <rdfs:domain rdf:resource="SearchDonationsResults" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFamilyName2">
+    <rdfs:domain rdf:resource="SearchDonationsResults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getDate3">
+    <rdfs:domain rdf:resource="SearchDonationsResults" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getAmount2">
+    <rdfs:domain rdf:resource="SearchDonationsResults" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getMeansOfPayment2">
+    <rdfs:domain rdf:resource="SearchDonationsResults" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.deleteDonation">
+    <rdfs:domain rdf:resource="SearchDonationsResults" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance8">
+    <rdfs:domain rdf:resource="SearchDonationsResults" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.assistToEventInstance">
+    <rdfs:domain rdf:resource="SearchCriteriaForEvent" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.assistToEvent">
+    <rdfs:domain rdf:resource="SearchCriteriaForEvent" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.toString">
+    <rdfs:domain rdf:resource="SearchCriteriaForEvent" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedField.getName2">
+    <rdfs:domain rdf:resource="SimpleDatePanelForLabel" />
+    <rdfs:range rdf:resource="AssociatedField" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.HSQLServer.startDatabase">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="HSQLServer" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.HSQLServer.getInstance">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="HSQLServer" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.setName2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.setEliminable2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedField.setType2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="AssociatedField" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.setAssociatedFields2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.HibernateUtil.getSessionFactory">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="HibernateUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Event.getId">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.getName3">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.getAssociatedFields3">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.removeLabelsAndAssociatedFields">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setAssitedToEvents">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getAssitedToEvents2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getAssociatedFieldValues">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.setAssociatedField">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.getAssociatedField2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.setLabel">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.getLabel2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.setValueOfField">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.getValueOfField2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setBirthDate2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getBirthDate">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setCellPhone2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCellPhone">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setCity2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCity">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setCivilState2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCivilState">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setCountry2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCountry">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setDistributor2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getDistributor">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setEmail2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getEmail2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setFamilyName2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFamilyName3">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setFlatNumber2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFlatNumber">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setFloor2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFloor">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setGender2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getGender">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setHouse2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getHouse">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setHouseNumber2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getHouseNumber">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setKindOfShipping2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getKindOfShipping">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setLabels">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getLabels">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setNeighborhood2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNeighborhood">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setNotes2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNotes">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setNumberOfCopies2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNumberOfCopies">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setNumberOfLabels2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNumberOfLabels">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setCommentOfLabel2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCommentOfLabel">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setNumberOfPersons2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNumberOfPersons">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setPhone2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getPhone">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setPostalNumber2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getPostalNumber">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setProvince2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getProvince">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setReceivesMagazine2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.isReceivesMagazine2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setStreet2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getStreet">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setWork2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getWork">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setSector2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getSector">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.setDate3">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.getDate3">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.removeEventInstance">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.setAmount2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getAmount3">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.setMeansOfPayment2">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getMeansOfPayment3">
+    <rdfs:domain rdf:resource="DataBaseManager" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.hasLabel2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getName3">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFamilyName4">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listDonationsForPerson2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance9">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getDate4">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.MailLabel.setFamilyNameAndName">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="MailLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.MailLabel.setCpAndCity">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="MailLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getPostalNumber2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCity2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getHouse2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNeighborhood2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFloor2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFlatNumber2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.MailLabel.setHouseNeighborhoodFloorFlatNumber">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="MailLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.MailLabel.setProvinceAndCountry">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="MailLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getProvince2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCountry2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.MailLabel.setStreetAndHouseNumber">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="MailLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getStreet2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getHouseNumber2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getDistributor2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getLabel2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.getValueOfField3">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getAssociatedFieldValuesForLabel2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.getAssociatedFields4">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNumberOfCopies2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getKindOfShipping2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.MailLabel.setZoneAndDistributor">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="MailLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.MailLabel.setCommentOfLabel">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="MailLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCommentOfLabel2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNumberOfLabels2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.mailing.JasperReportBuilder.createReport">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="JasperReportBuilder" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getPhone2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCellPhone2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getEmail3">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.isReceivesMagazine3">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getLastDonation">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getAmount4">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getSector2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listDonationsForPersonBetweenDates2">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.peopleWhoDistributed">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.deletePerson">
+    <rdfs:domain rdf:resource="Searchresults" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.getAssociatedFields5">
+    <rdfs:domain rdf:resource="CriteriaCreationPanelForLabel" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedField.getType">
+    <rdfs:domain rdf:resource="CriteriaCreationPanelForLabel" />
+    <rdfs:range rdf:resource="AssociatedField" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.labels.internalPanels.AssociatedFieldPanelForLabel.setEnableAllComponents">
+    <rdfs:domain rdf:resource="CriteriaCreationPanelForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldPanelForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.labels.internalPanels.AssociatedFieldPanelForLabel.getAssociatedValues">
+    <rdfs:domain rdf:resource="CriteriaCreationPanelForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldPanelForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.hasLabel3">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedField.getType2">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="AssociatedField" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueForSearch.getAssociatedField">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForSearch" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.getMonth">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldValueDateForSearch" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.isCompleteDate">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldValueDateForSearch" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.getDay">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldValueDateForSearch" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.getYear">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldValueDateForSearch" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueForSearch.isEqual">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForSearch" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getAssociatedFieldValuesForLabel3">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.getValueOfField4">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.isJustMonthAndDay">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldValueDateForSearch" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueDateForSearch.isJustMonth">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldValueDateForSearch" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.personUtils.panels.labels.internalPanels.utilForSearchResults.AssociatedFieldValueStringForSearch.getValue">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="AssociatedFieldValueStringForSearch" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.getName4">
+    <rdfs:domain rdf:resource="SearchCriteriaForLabel" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.HSQLServer.stopFatabase">
+    <rdfs:domain rdf:resource="MainWindowKolbe" />
+    <rdfs:range rdf:resource="HSQLServer" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.HSQLServer.getInstance2">
+    <rdfs:domain rdf:resource="MainWindowKolbe" />
+    <rdfs:range rdf:resource="HSQLServer" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.updateEvent">
+    <rdfs:domain rdf:resource="EditEvents" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance10">
+    <rdfs:domain rdf:resource="EditEvents" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.updateEventInstance">
+    <rdfs:domain rdf:resource="EditEvents" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.deleteEventIntance">
+    <rdfs:domain rdf:resource="EditEvents" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.deleteEvent">
+    <rdfs:domain rdf:resource="EditEvents" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Event.getId2">
+    <rdfs:domain rdf:resource="EditEvents" />
+    <rdfs:range rdf:resource="Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.getEvent3">
+    <rdfs:domain rdf:resource="EditEvents" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Event.getName3">
+    <rdfs:domain rdf:resource="EditEvents" />
+    <rdfs:range rdf:resource="Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listEvents3">
+    <rdfs:domain rdf:resource="EditEvents" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listEventsIntancesForEvenr2">
+    <rdfs:domain rdf:resource="EditEvents" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.getDate4">
+    <rdfs:domain rdf:resource="EditEvents" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedField.getName3">
+    <rdfs:domain rdf:resource="SimpleFieldPanelForLabel" />
+    <rdfs:range rdf:resource="AssociatedField" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listEventsIntancesForEvenr3">
+    <rdfs:domain rdf:resource="CriteriaCreationPanelForEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance11">
+    <rdfs:domain rdf:resource="CriteriaCreationPanelForEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.getDate5">
+    <rdfs:domain rdf:resource="CriteriaCreationPanelForEvent" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.getAssociatedFields6">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.setLabel2">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.setAssociatedField2">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.setValueOfField2">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setLabels2">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.setAssociatedFieldValues">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedField.getName4">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="AssociatedField" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedField.getType3">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="AssociatedField" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listLabels3">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance12">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getLabels2">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getAssociatedFieldValuesForLabel4">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedFieldValueForLabel.getValueOfField5">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="AssociatedFieldValueForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.add.label.modifyAssociationField.AssociatedFieldPanelForLabel.getValue">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="AssociatedFieldPanelForLabel" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getId">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.peopleWhoDistributed2">
+    <rdfs:domain rdf:resource="EditLabelsForPerson" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listDonationsBetweenDates">
+    <rdfs:domain rdf:resource="SearchDonations" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance13">
+    <rdfs:domain rdf:resource="SearchDonations" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getDate5">
+    <rdfs:domain rdf:resource="SearchDonations" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.eventHasInstanceDate2">
+    <rdfs:domain rdf:resource="AddEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance14">
+    <rdfs:domain rdf:resource="AddEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.setEvent2">
+    <rdfs:domain rdf:resource="AddEvent" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.EventInstance.setDate4">
+    <rdfs:domain rdf:resource="AddEvent" />
+    <rdfs:range rdf:resource="EventInstance" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.saveEntity4">
+    <rdfs:domain rdf:resource="AddEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Event.setName2">
+    <rdfs:domain rdf:resource="AddEvent" />
+    <rdfs:range rdf:resource="Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.listEvents4">
+    <rdfs:domain rdf:resource="AddEvent" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Event.getName4">
+    <rdfs:domain rdf:resource="AddEvent" />
+    <rdfs:range rdf:resource="Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.AssociatedField.getName5">
+    <rdfs:domain rdf:resource="SimpleFieldPanelForLabel" />
+    <rdfs:range rdf:resource="AssociatedField" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getGender2">
+    <rdfs:domain rdf:resource="CreateLetterDialog" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNumberOfPersons2">
+    <rdfs:domain rdf:resource="CreateLetterDialog" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getName4">
+    <rdfs:domain rdf:resource="CreateLetterDialog" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFamilyName5">
+    <rdfs:domain rdf:resource="CreateLetterDialog" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.getAmount5">
+    <rdfs:domain rdf:resource="CreateLetterDialog" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.getName5">
+    <rdfs:domain rdf:resource="ModifyLabelName" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Label.setName3">
+    <rdfs:domain rdf:resource="ModifyLabelName" />
+    <rdfs:range rdf:resource="Label" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.edit.EditLabels.createComboBoxModelOfLabels">
+    <rdfs:domain rdf:resource="ModifyLabelName" />
+    <rdfs:range rdf:resource="EditLabels" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Event.equals">
+    <rdfs:domain rdf:resource="EventInstance" />
+    <rdfs:range rdf:resource="Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Event.getName5">
+    <rdfs:domain rdf:resource="EventInstance" />
+    <rdfs:range rdf:resource="Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getName5">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFamilyName6">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getGender3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getBirthDate2">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCivilState2">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getPhone3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCellPhone3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getEmail4">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getWork2">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNotes2">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getStreet3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getHouseNumber3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getHouse3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNeighborhood3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFloor3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFlatNumber3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getPostalNumber3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCity3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getProvince3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCountry3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getCommentOfLabel3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getSector3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.isReceivesMagazine4">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNumberOfPersons3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNumberOfLabels3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getNumberOfCopies3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getKindOfShipping3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getDistributor3">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.add.AddPersonFrame.checkBoxSendMagazineChanged">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="AddPersonFrame" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.updatePerson2">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance15">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ui.search.Searchresults.updateSearchValue">
+    <rdfs:domain rdf:resource="EditPerson" />
+    <rdfs:range rdf:resource="Searchresults" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getName6">
+    <rdfs:domain rdf:resource="AddDonation" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Person.getFamilyName7">
+    <rdfs:domain rdf:resource="AddDonation" />
+    <rdfs:range rdf:resource="Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.setAmount3">
+    <rdfs:domain rdf:resource="AddDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.setDate2">
+    <rdfs:domain rdf:resource="AddDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.setDonor">
+    <rdfs:domain rdf:resource="AddDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.pojos.Donation.setMeansOfPayment3">
+    <rdfs:domain rdf:resource="AddDonation" />
+    <rdfs:range rdf:resource="Donation" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.saveEntity5">
+    <rdfs:domain rdf:resource="AddDonation" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="bd.DataBaseManager.getInstance16">
+    <rdfs:domain rdf:resource="AddDonation" />
+    <rdfs:range rdf:resource="DataBaseManager" />
+  </owl:ObjectProperty>
+</rdf:RDF>

@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE rdf:RDF [
+          <!ENTITY xsd		"http://www.w3.org/2001/XMLSchema#" >
+	  <!ENTITY rdf		"http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	  <!ENTITY rdfs		"http://www.w3.org/2000/01/rdf-schema#" >
+	  <!ENTITY dc		"http://purl.org/dc/elements/1.1/" >
+	  <!ENTITY owl		"http://www.w3.org/2002/07/owl#" >
+	  <!ENTITY foaf 	"http://xmlns.com/foaf/0.1/">
+	  <!ENTITY ical 	"http://www.w3.org/2002/12/cal/ical#">]>
+
+<rdf:RDF
+ xmlns:rdf	="&rdf;"
+ xmlns:rdfs	="&rdfs;"
+ xmlns:owl	="http://www.w3.org/2002/07/owl#"
+ xmlns:dc	="&dc;">
+
+  <!-- Every entity (even external) must be typed in OWL-DL. -->
+
+  <!-- this is for satisfying the OWL Species validator
+       (which is not satisfied anyway) -->
+
+	   <!-- OWL Header Example -->
+	
+<!--  Mobile Media BluePrint COmponents  -->
+
+	<owl:Class rdf:about="AlbumListScreen">
+		<owl:onProperty rdf:resource="#ControlAlbumRequired2" />
+		<owl:onProperty rdf:resource="#ControlMediaListRequired" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>Sc</rdfs:label>
+		<rdfs:label>V</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="AddMediaToAlbumScreen">
+		<owl:onProperty rdf:resource="#ControlMediaRequired3" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>Sc</rdfs:label>
+		<rdfs:label>V</rdfs:label>
+		<rdfs:label>SMS</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="NewLabelScreen">
+		<owl:onProperty rdf:resource="#ControlAlbumRequired1" />
+		<owl:onProperty rdf:resource="#ControlMediaRequired1" />
+		<rdfs:label>Sc</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="MediaListScreen">
+		<owl:onProperty rdf:resource="#ControlMediaRequired2" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>Sc</rdfs:label>
+		<rdfs:label>V</rdfs:label>
+		<rdfs:label>M</rdfs:label>
+		<rdfs:label>F</rdfs:label>
+		<rdfs:label>S</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="PhotoViewScreen">
+		<owl:onProperty rdf:resource="#ControlSMSRequired2" />
+		<owl:onProperty rdf:resource="#ControlCopy2Required" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>Sc</rdfs:label>
+		<rdfs:label>P</rdfs:label>
+		<rdfs:label>SMS</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="NetworkScreen">
+		<owl:onProperty rdf:resource="#ControlSMSRequired1" />
+		<rdfs:label>Sc</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="PlayMusicScreen">
+		<owl:onProperty rdf:resource="#ControlMusicRequired" />
+		<owl:onProperty rdf:resource="#ControlCopy3Required" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>Sc</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+		<rdfs:label>M</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="PlayVideoScreen">
+		<owl:onProperty rdf:resource="#ControlVideoRequired" />
+		<owl:onProperty rdf:resource="#ControlCopy1Required" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>Sc</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+		<rdfs:label>V</rdfs:label>
+	</owl:Class>
+
+	<owl:Class rdf:about="CaptureMediaScreen">
+		<owl:onProperty rdf:resource="#ControlCaptureRequired" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>Sc</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+		<rdfs:label>V</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="CaptureMediaController">
+		<owl:onProperty rdf:resource="#ManageCaptureRequired1" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo1Required1" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo2Required" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo3Required" />
+		<rdfs:label>P</rdfs:label>
+		<rdfs:label>V</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="PlayMusicController">
+		<owl:onProperty rdf:resource="#ManageAlbumListRequired4" />
+		<owl:onProperty rdf:resource="#ManageMediaRequired3" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo1Required9" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo2Required" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo3Required" />
+		<owl:onProperty rdf:resource="#ManageMusicRequired" />
+		<owl:onProperty rdf:resource="#HandleCommand4Required2" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>M</rdfs:label>
+		<rdfs:label>P</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="PlayVideoController">
+		<owl:onProperty rdf:resource="#ManageAlbumListRequired2" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo1Required2" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo2Required" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo3Required" />
+		<owl:onProperty rdf:resource="#ManageVideoRequired" />
+		<owl:onProperty rdf:resource="#HandleCommand4Required3" />
+		<rdfs:label>M</rdfs:label>
+		<rdfs:label>P</rdfs:label>
+	</owl:Class>
+	
+	
+	<owl:Class rdf:about="SMSController">
+		<owl:onProperty rdf:resource="#ManageAlbumListRequired3" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo1Required3" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo2Required" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo3Required" />
+		<owl:onProperty rdf:resource="#ManageNetworkRequired" />
+		<owl:onProperty rdf:resource="#ManageSMSRequired2" />
+		<owl:onProperty rdf:resource="#HandleCommand4Required4" />
+		<rdfs:label>SMS</rdfs:label>
+		<rdfs:label>P</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="BaseController">
+		<owl:onProperty rdf:resource="#ManageAlbumListRequired1" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo1Required4" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo2Required" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo3Required" />
+		<rdfs:label>EH</rdfs:label>
+		<rdfs:label>Ph</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="MediaController">
+		<owl:onProperty rdf:resource="#ManageMediaRequired1" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo1Required7" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo2Required" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo3Required" />
+		<owl:onProperty rdf:resource="#HandleCommand3Required" />
+		<owl:onProperty rdf:resource="#ManageLabelRequired2" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>SMS</rdfs:label>
+		<rdfs:label>V</rdfs:label>
+		<rdfs:label>M</rdfs:label>
+		<rdfs:label>F</rdfs:label>
+		<rdfs:label>S</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+		<rdfs:label>P</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="AlbumController">
+		<owl:onProperty rdf:resource="#ManageAlbumListRequired5" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo1Required6" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo2Required" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo3Required" />
+		<owl:onProperty rdf:resource="#ManageLabelRequired1" />
+		<owl:onProperty rdf:resource="#HandleCommand2Required" />
+		<rdfs:label>EH</rdfs:label>
+		<rdfs:label>P</rdfs:label>
+	</owl:Class>
+
+	<owl:Class rdf:about="PhotoViewController">
+		<owl:onProperty rdf:resource="#ManageMediaRequired2" />
+		<owl:onProperty rdf:resource="#ManageImageRequired" />
+		<owl:onProperty rdf:resource="#ManageCaptureRequired2" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo1Required8" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo2Required" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo3Required" />
+		<owl:onProperty rdf:resource="#ManageSMSRequired1" />
+		<owl:onProperty rdf:resource="#HandleCommand4Required1" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>SMS</rdfs:label>
+		<rdfs:label>F</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+		<rdfs:label>P</rdfs:label>
+	</owl:Class>
+
+	
+	<owl:Class rdf:about="MediaListController">
+		<owl:onProperty rdf:resource="#ManageMediaListRequired" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo1Required5" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo2Required" />
+		<owl:onProperty rdf:resource="#ManageMediaInfo3Required" />
+		<owl:onProperty rdf:resource="#HandleCommand1Required" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>V</rdfs:label>
+		<rdfs:label>M</rdfs:label>
+		<rdfs:label>F</rdfs:label>
+		<rdfs:label>S</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+	</owl:Class>
+
+	
+	<owl:Class rdf:about="AlbumPhotoData">
+		<owl:onProperty rdf:resource="#PersistPhotoRequired" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>SMS</rdfs:label>
+		<rdfs:label>V</rdfs:label>
+		<rdfs:label>F</rdfs:label>
+		<rdfs:label>S</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+		<rdfs:label>P</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="AlbumMusicData">
+		<owl:onProperty rdf:resource="#PersistMusicRequired" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>SMS</rdfs:label>
+		<rdfs:label>V</rdfs:label>
+		<rdfs:label>M</rdfs:label>
+		<rdfs:label>F</rdfs:label>
+		<rdfs:label>S</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+		<rdfs:label>P</rdfs:label>
+	</owl:Class>
+
+	<owl:Class rdf:about="AlbumVideoData">
+		<owl:onProperty rdf:resource="#PersistVideoRequired" />
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>SMS</rdfs:label>
+		<rdfs:label>V</rdfs:label>
+		<rdfs:label>F</rdfs:label>
+		<rdfs:label>S</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+		<rdfs:label>P</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="ImageAccessor">
+		<rdfs:label>Ph</rdfs:label>
+		<rdfs:label>SMS</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+		<rdfs:label>P</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="MusicAccessor">
+		<rdfs:label>M</rdfs:label>
+		<rdfs:label>P</rdfs:label>		
+	</owl:Class>
+	
+	<owl:Class rdf:about="VideoAccessor">
+		<rdfs:label>V</rdfs:label>
+		<rdfs:label>P</rdfs:label>	
+	</owl:Class>
+	
+	<owl:Class rdf:about="Exception">
+		<rdfs:label>EH</rdfs:label>
+	</owl:Class>
+	
+<!-- Mobile Media BluePrint Interfaces Required defined like a ObjectProperty-->		
+	
+	<owl:ObjectProperty rdf:ID="ManageCaptureRequired1">
+		<rdfs:domain rdf:resource="#CaptureMediaController" />
+		<rdfs:range rdf:resource="#CaptureMediaScreen" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageCaptureRequired2">
+		<rdfs:domain rdf:resource="#PhotoViewController" />
+		<rdfs:range rdf:resource="#CaptureMediaScreen" />
+	</owl:ObjectProperty>
+  
+	<owl:ObjectProperty rdf:ID="ControlCaptureRequired">
+		<rdfs:domain rdf:resource="#CaptureMediaScreen" />
+		<rdfs:range rdf:resource="#CaptureMediaController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageVideoRequired">
+		<rdfs:domain rdf:resource="#PlayVideoController" />
+		<rdfs:range rdf:resource="#PlayVideoScreen" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ControlVideoRequired">
+		<rdfs:domain rdf:resource="#PlayVideoScreen" />
+		<rdfs:range rdf:resource="#PlayVideoController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ControlCopy1Required">
+		<rdfs:domain rdf:resource="#PlayVideoScreen" />
+		<rdfs:range rdf:resource="#PlayVideoController" />
+	</owl:ObjectProperty>	
+	
+	<owl:ObjectProperty rdf:ID="ControlSMSRequired1">
+		<rdfs:domain rdf:resource="#NetworkScreen" />
+		<rdfs:range rdf:resource="#SMSController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ControlSMSRequired2">
+		<rdfs:domain rdf:resource="#PhotoViewScreen" />
+		<rdfs:range rdf:resource="#SMSController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageNetworkRequired">
+		<rdfs:domain rdf:resource="#SMSController" />
+		<rdfs:range rdf:resource="#NetworkScreen" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageAlbumListRequired1">
+		<rdfs:domain rdf:resource="#BaseController" />
+		<rdfs:range rdf:resource="#AlbumListScreen" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageAlbumListRequired2">
+		<rdfs:domain rdf:resource="#PlayVideoController" />
+		<rdfs:range rdf:resource="#AlbumListScreen" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageAlbumListRequired3">
+		<rdfs:domain rdf:resource="#SMSController" />
+		<rdfs:range rdf:resource="#AlbumListScreen" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageAlbumListRequired4">
+		<rdfs:domain rdf:resource="#PlayMusicController" />
+		<rdfs:range rdf:resource="#AlbumListScreen" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageAlbumListRequired5">
+		<rdfs:domain rdf:resource="#AlbumController" />
+		<rdfs:range rdf:resource="#AlbumListScreen" />
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:ID="HandleCommand1Required">
+		<rdfs:domain rdf:resource="#MediaListController" />
+		<rdfs:range rdf:resource="#BaseController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ControlMediaListRequired">
+		<rdfs:domain rdf:resource="#AlbumListScreen" />
+		<rdfs:range rdf:resource="#MediaListController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageMediaListRequired">
+		<rdfs:domain rdf:resource="#MediaListController" />
+		<rdfs:range rdf:resource="#MediaListScreen" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="HandleCommand2Required">
+		<rdfs:domain rdf:resource="#AlbumController" />
+		<rdfs:range rdf:resource="#MediaListController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ControlAlbumRequired1">
+		<rdfs:domain rdf:resource="#NewLabelScreen" />
+		<rdfs:range rdf:resource="#AlbumController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ControlAlbumRequired2">
+		<rdfs:domain rdf:resource="#AlbumListScreen" />
+		<rdfs:range rdf:resource="#AlbumController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageLabelRequired1">
+		<rdfs:domain rdf:resource="#AlbumController" />
+		<rdfs:range rdf:resource="#NewLabelScreen" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageLabelRequired2">
+		<rdfs:domain rdf:resource="#MediaController" />
+		<rdfs:range rdf:resource="#NewLabelScreen" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="HandleCommand3Required">
+		<rdfs:domain rdf:resource="#MediaController" />
+		<rdfs:range rdf:resource="#AlbumController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ControlMediaRequired1">
+		<rdfs:domain rdf:resource="#NewLabelScreen" />
+		<rdfs:range rdf:resource="#MediaController" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ControlMediaRequired2">
+		<rdfs:domain rdf:resource="#MediaListScreen" />
+		<rdfs:range rdf:resource="#MediaController" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ControlMediaRequired3">
+		<rdfs:domain rdf:resource="#AddMediaToAlbumScreen" />
+		<rdfs:range rdf:resource="#MediaController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageMediaRequired1">
+		<rdfs:domain rdf:resource="#MediaController" />
+		<rdfs:range rdf:resource="#AddMediaToAlbumScreen" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaRequired2">
+		<rdfs:domain rdf:resource="#PhotoViewController" />
+		<rdfs:range rdf:resource="#AddMediaToAlbumScreen" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaRequired3">
+		<rdfs:domain rdf:resource="#PlayMusicController" />
+		<rdfs:range rdf:resource="#AddMediaToAlbumScreen" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageImageRequired">
+		<rdfs:domain rdf:resource="#PhotoViewController" />
+		<rdfs:range rdf:resource="#MediaController" />
+	</owl:ObjectProperty>
+
+
+	<owl:ObjectProperty rdf:ID="HandleCommand4Required1">
+		<rdfs:domain rdf:resource="#PhotoViewController" />
+		<rdfs:range rdf:resource="#MediaController" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="HandleCommand4Required2">
+		<rdfs:domain rdf:resource="#PlayMusicController" />
+		<rdfs:range rdf:resource="#MediaController" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="HandleCommand4Required3">
+		<rdfs:domain rdf:resource="#PlayVideoController" />
+		<rdfs:range rdf:resource="#MediaController" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="HandleCommand4Required4">
+		<rdfs:domain rdf:resource="#SMSController" />
+		<rdfs:range rdf:resource="#MediaController" />
+	</owl:ObjectProperty>
+
+	
+	<owl:ObjectProperty rdf:ID="ControlCopy2Required">
+		<rdfs:domain rdf:resource="#PhotoViewScreen" />
+		<rdfs:range rdf:resource="#PhotoViewController" />
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:ID="ManageSMSRequired1">
+		<rdfs:domain rdf:resource="#PhotoViewController" />
+		<rdfs:range rdf:resource="#PhotoViewScreen" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageSMSRequired2">
+		<rdfs:domain rdf:resource="#SMSController" />
+		<rdfs:range rdf:resource="#PhotoViewScreen" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageMusicRequired">
+		<rdfs:domain rdf:resource="#PlayMusicController" />
+		<rdfs:range rdf:resource="#PlayMusicScreen" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ControlMusicRequired">
+		<rdfs:domain rdf:resource="#PlayMusicScreen" />
+		<rdfs:range rdf:resource="#PlayMusicController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ControlCopy3Required">
+		<rdfs:domain rdf:resource="#PlayMusicScreen" />
+		<rdfs:range rdf:resource="#PlayMusicController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="PersistPhotoRequired">
+		<rdfs:domain rdf:resource="#AlbumPhotoData" />
+		<rdfs:range rdf:resource="#ImageAccessor" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="PersistMusicRequired">
+		<rdfs:domain rdf:resource="#AlbumMusicData" />
+		<rdfs:range rdf:resource="#MusicAccessor" />
+	</owl:ObjectProperty>
+		
+	<owl:ObjectProperty rdf:ID="PersistVideoRequired">
+		<rdfs:domain rdf:resource="#AlbumVideoData" />
+		<rdfs:range rdf:resource="#VideoAccessor" />
+	</owl:ObjectProperty>
+	
+	
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo1Required1">
+		<rdfs:domain rdf:resource="#CaptureMediaController" />
+		<rdfs:range rdf:resource="#AlbumPhotoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo1Required2">
+		<rdfs:domain rdf:resource="#PlayVideoController" />
+		<rdfs:range rdf:resource="#AlbumPhotoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo1Required3">
+		<rdfs:domain rdf:resource="#SMSController" />
+		<rdfs:range rdf:resource="#AlbumPhotoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo1Required4">
+		<rdfs:domain rdf:resource="#BaseController" />
+		<rdfs:range rdf:resource="#AlbumPhotoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo1Required5">
+		<rdfs:domain rdf:resource="#MediaListController" />
+		<rdfs:range rdf:resource="#AlbumPhotoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo1Required6">
+		<rdfs:domain rdf:resource="#AlbumController" />
+		<rdfs:range rdf:resource="#AlbumPhotoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo1Required7">
+		<rdfs:domain rdf:resource="#MediaController" />
+		<rdfs:range rdf:resource="#AlbumPhotoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo1Required8">
+		<rdfs:domain rdf:resource="#PhotoViewController" />
+		<rdfs:range rdf:resource="#AlbumPhotoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo1Required9">
+		<rdfs:domain rdf:resource="#PlayMusicController" />
+		<rdfs:range rdf:resource="#AlbumPhotoData" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo2Required1">
+		<rdfs:domain rdf:resource="#CaptureMediaController" />
+		<rdfs:range rdf:resource="#AlbumMusicData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo2Required2">
+		<rdfs:domain rdf:resource="#PlayVideoController" />
+		<rdfs:range rdf:resource="#AlbumMusicData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo2Required3">
+		<rdfs:domain rdf:resource="#SMSController" />
+		<rdfs:range rdf:resource="#AlbumMusicData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo2Required4">
+		<rdfs:domain rdf:resource="#BaseController" />
+		<rdfs:range rdf:resource="#AlbumMusicData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo2Required5">
+		<rdfs:domain rdf:resource="#MediaListController" />
+		<rdfs:range rdf:resource="#AlbumMusicData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo2Required6">
+		<rdfs:domain rdf:resource="#AlbumController" />
+		<rdfs:range rdf:resource="#AlbumMusicData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo2Required7">
+		<rdfs:domain rdf:resource="#MediaController" />
+		<rdfs:range rdf:resource="#AlbumMusicData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo2Required8">
+		<rdfs:domain rdf:resource="#PhotoViewController" />
+		<rdfs:range rdf:resource="#AlbumMusicData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo2Required9">
+		<rdfs:domain rdf:resource="#PlayMusicController" />
+		<rdfs:range rdf:resource="#AlbumMusicData" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo3Required1">
+		<rdfs:domain rdf:resource="#CaptureMediaController" />
+		<rdfs:range rdf:resource="#AlbumVideoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo3Required2">
+		<rdfs:domain rdf:resource="#PlayVideoController" />
+		<rdfs:range rdf:resource="#AlbumVideoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo3Required3">
+		<rdfs:domain rdf:resource="#SMSController" />
+		<rdfs:range rdf:resource="#AlbumVideoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo3Required4">
+		<rdfs:domain rdf:resource="#BaseController" />
+		<rdfs:range rdf:resource="#AlbumVideoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo3Required5">
+		<rdfs:domain rdf:resource="#MediaListController" />
+		<rdfs:range rdf:resource="#AlbumVideoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo3Required6">
+		<rdfs:domain rdf:resource="#AlbumController" />
+		<rdfs:range rdf:resource="#AlbumVideoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo3Required7">
+		<rdfs:domain rdf:resource="#MediaController" />
+		<rdfs:range rdf:resource="#AlbumVideoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo3Required8">
+		<rdfs:domain rdf:resource="#PhotoViewController" />
+		<rdfs:range rdf:resource="#AlbumVideoData" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageMediaInfo3Required9">
+		<rdfs:domain rdf:resource="#PlayMusicController" />
+		<rdfs:range rdf:resource="#AlbumVideoData" />
+	</owl:ObjectProperty>
+
+</rdf:RDF>

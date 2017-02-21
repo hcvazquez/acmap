@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE rdf:RDF [
+          <!ENTITY xsd		"http://www.w3.org/2001/XMLSchema#" >
+	  <!ENTITY rdf		"http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	  <!ENTITY rdfs		"http://www.w3.org/2000/01/rdf-schema#" >
+	  <!ENTITY dc		"http://purl.org/dc/elements/1.1/" >
+	  <!ENTITY owl		"http://www.w3.org/2002/07/owl#" >
+	  <!ENTITY foaf 	"http://xmlns.com/foaf/0.1/">
+	  <!ENTITY ical 	"http://www.w3.org/2002/12/cal/ical#">]>
+
+<rdf:RDF
+ xmlns:rdf	="&rdf;"
+ xmlns:rdfs	="&rdfs;"
+ xmlns:owl	="http://www.w3.org/2002/07/owl#"
+ xmlns:dc	="&dc;">
+
+  <!-- Every entity (even external) must be typed in OWL-DL. -->
+
+  <!-- this is for satisfying the OWL Species validator
+       (which is not satisfied anyway) -->
+
+	   <!-- OWL Header Example -->
+
+<!--  Mobile Media BluePrint COmponents  -->
+
+	<owl:Class rdf:about="AddSubscribers">
+		<rdfs:label>MS</rdfs:label>
+		<rdfs:label>MD</rdfs:label>
+		<rdfs:label>ME</rdfs:label>
+		<rdfs:label>ML</rdfs:label>		
+	</owl:Class>
+	
+	<owl:Class rdf:about="EditSubscribers">
+		<rdfs:label>MS</rdfs:label>
+		<rdfs:label>MD</rdfs:label>
+		<rdfs:label>ME</rdfs:label>
+		<rdfs:label>ML</rdfs:label>	
+	</owl:Class>
+	
+	<owl:Class rdf:about="SubscribersController">
+		<owl:onProperty rdf:resource="#manageSubscribersAdd" />
+		<owl:onProperty rdf:resource="#manageSubscribersEdit" />
+		<rdfs:label>MS</rdfs:label>
+		<rdfs:label>MD</rdfs:label>
+		<rdfs:label>ME</rdfs:label>
+		<rdfs:label>ML</rdfs:label>	
+	</owl:Class>
+	
+	<owl:Class rdf:about="Mailing">
+		<rdfs:label>CM</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="MailingController">
+		<owl:onProperty rdf:resource="#JaspertReportBuilder" />
+		<rdfs:label>CM</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="Search">
+		<rdfs:label>MS</rdfs:label>
+		<rdfs:label>MD</rdfs:label>
+		<rdfs:label>ME</rdfs:label>
+		<rdfs:label>ML</rdfs:label>	
+	</owl:Class>
+	
+	<owl:Class rdf:about="SearchController">
+		<owl:onProperty rdf:resource="#SearchCriterion" />
+		<rdfs:label>MS</rdfs:label>
+		<rdfs:label>MD</rdfs:label>
+		<rdfs:label>ME</rdfs:label>
+		<rdfs:label>ML</rdfs:label>	
+	</owl:Class>
+	
+	<owl:Class rdf:about="Persistance">
+		<owl:onProperty rdf:resource="#update" />
+		<owl:onProperty rdf:resource="#add" />
+		<owl:onProperty rdf:resource="#list1" />
+		<owl:onProperty rdf:resource="#list2" />
+		<rdfs:label>MS</rdfs:label>
+		<rdfs:label>MD</rdfs:label>
+		<rdfs:label>ME</rdfs:label>
+		<rdfs:label>ML</rdfs:label>	
+	</owl:Class>
+	
+<!-- Mobile Media BluePrint Interfaces Required defined like a ObjectProperty-->		
+	
+	<owl:ObjectProperty rdf:ID="manageSubscribersAdd">
+		<rdfs:domain rdf:resource="#SubscribersController" />
+		<rdfs:range rdf:resource="#AddSubscribers" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="manageSubscribersEdit">
+		<rdfs:domain rdf:resource="#SubscribersController" />
+		<rdfs:range rdf:resource="#EditSubscribers" />
+	</owl:ObjectProperty>
+  
+	<owl:ObjectProperty rdf:ID="JaspertReportBuilder">
+		<rdfs:domain rdf:resource="#MailingController" />
+		<rdfs:range rdf:resource="#Mailing" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="SearchCriterion">
+		<rdfs:domain rdf:resource="#SearchController" />
+		<rdfs:range rdf:resource="#Search" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="add">
+		<rdfs:domain rdf:resource="#Persistance" />
+		<rdfs:range rdf:resource="#SubscribersController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="update">
+		<rdfs:domain rdf:resource="#Persistance" />
+		<rdfs:range rdf:resource="#SubscribersController" />
+	</owl:ObjectProperty>
+
+	<owl:ObjectProperty rdf:ID="list1">
+		<rdfs:domain rdf:resource="#Persistance" />
+		<rdfs:range rdf:resource="#MailingController" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="list2">
+		<rdfs:domain rdf:resource="#Persistance" />
+		<rdfs:range rdf:resource="#SearchController" />
+	</owl:ObjectProperty>	
+
+</rdf:RDF>

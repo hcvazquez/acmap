@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+  xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>**</type>
+  <onto1>file:/C:/benchmarks/ontoarchdiagram.rdf</onto1>
+  <onto2>file:/C:/benchmarks/ontojavacode.rdf</onto2>
+  <uri1>file:/C:/benchmarks/ontoarchdiagram.rdf</uri1>
+  <uri2>file:/C:/benchmarks/ontojavacode.rdf</uri2>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/PhotoViewController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.core.ui.controller.PhotoViewController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/BaseController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.sms.SmsReceiverController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/MediaController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.core.ui.controller.MediaController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/NewLabelScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.core.ui.screens.NewLabelScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/MediaListController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.core.ui.controller.MediaListController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/AlbumController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.core.ui.controller.AlbumController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/AlbumListScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/NetworkScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.sms.NetworkScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/MediaListScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.core.ui.screens.MediaListScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/PlayVideoController'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.core.ui.controller.PlayVideoController'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/PhotoViewScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.core.ui.screens.PhotoViewScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/PlayVideoScreen'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ubc.midp.mobilephoto.core.ui.screens.PlayVideoScreen'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required8'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required9'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo3'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required8'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required4'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo10'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaListRequired'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.screens.MediaListScreen.initMenu'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required4'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo10'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageVideoRequired'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.screens.PlayVideoScreen.startVideo'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageVideoRequired'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.screens.PlayVideoScreen.stopVideo'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageVideoRequired'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.screens.PlayVideoScreen.stopVideo2'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo4'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo7'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo5'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo8'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo9'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo6'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required8'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required9'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo3'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo7'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo5'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo8'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo9'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo6'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo4'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required4'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo10'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo1Required2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo2'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required9'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo3'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo2'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo2Required2'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo2'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageAlbumListRequired1'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.initMenu'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo4'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo7'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo5'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo8'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo9'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1  rdf:resource='file:/C:/benchmarks/ontoarchdiagram.rdf#ManageMediaInfo3Required7'/>
+      <entity2  rdf:resource='file:/C:/benchmarks/ontojavacode.rdf#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo6'/>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1</measure>
+      <relation>=</relation>
+    </Cell>
+  </map></Alignment>
+</rdf:RDF>

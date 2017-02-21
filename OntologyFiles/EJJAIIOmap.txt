@@ -1,0 +1,5 @@
+GUI_Adapter=GUI_Elements
+BusinessManager=Business_Rules
+BusinessDataManager=Data_Manager
+BusinessRule=Business_Rules
+DataObject=Data_Manager

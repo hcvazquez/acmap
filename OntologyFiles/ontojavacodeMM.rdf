@@ -1,0 +1,1493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+          <!ENTITY xsd		"http://www.w3.org/2001/XMLSchema#" >
+	  <!ENTITY rdf		"http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	  <!ENTITY rdfs		"http://www.w3.org/2000/01/rdf-schema#" >
+	  <!ENTITY dc		"http://purl.org/dc/elements/1.1/" >
+	  <!ENTITY owl		"http://www.w3.org/2002/07/owl#" >
+	  <!ENTITY foaf 	"http://xmlns.com/foaf/0.1/">
+	  <!ENTITY ical 	"http://www.w3.org/2002/12/cal/ical#">]>
+
+
+<rdf:RDF
+ xmlns:rdf	="&rdf;"
+ xmlns:rdfs	="&rdfs;"
+ xmlns:owl	="http://www.w3.org/2002/07/owl#"
+ xmlns:dc	="&dc;">
+ 
+  <owl:Class rdf:about="SmsSenderThread">
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.sms.SmsMessaging.sendImage" />
+	<rdfs:label>SMS</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="MusicPlayController">
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.PlayMediaScreen.startPlay" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.PlayMediaScreen.pausePlay" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setItemName" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setLabePath" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getPath" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addMediaData" />
+    <owl:onProperty rdf:resource="#lancs.midp.mobilephoto.lib.exceptions.PersistenceMechanismException.getCause" />
+	<rdfs:label>M</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>P</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="ImageAlbumData">
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.ImageMediaAccessor.loadSingleImageFromRMS" />
+	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>P</rdfs:label>	
+  </owl:Class>
+  <owl:Class rdf:about="ImagePathNotValidException" >
+  	<rdfs:label>EH</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="VideoMediaAccessor">
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.removeRecords" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaDataFromRMS" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.updateMediaInfo" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.addMediaArrayOfBytes" />
+	<rdfs:label>V</rdfs:label>
+	<rdfs:label>P</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="PersistenceMechanismException" >
+	<rdfs:label>P</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="InvalidArrayFormatException" >
+    <rdfs:label>EH</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="VideoAlbumData">
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaBytesFromRMS" />
+	<rdfs:label>V</rdfs:label>
+	<rdfs:label>P</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="PhotoViewController">
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setItemName2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setLabePath2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.PhotoViewScreen.isFromSMS" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setCapturedMedia" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.PhotoViewScreen.getImage" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getCapturedMedia" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getItemName" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getPath2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addImageData" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addMediaData2" />
+    <owl:onProperty rdf:resource="#lancs.midp.mobilephoto.lib.exceptions.PersistenceMechanismException.getCause2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.CaptureVideoScreen.takePicture" />
+	<rdfs:label>EH</rdfs:label>
+	<rdfs:label>F</rdfs:label>
+	<rdfs:label>P</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>SMS</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="AddMediaToAlbum">
+	<rdfs:label>V</rdfs:label>
+	<rdfs:label>Sc</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>SMS</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="InvalidPhotoAlbumNameException">
+    <rdfs:label>EH</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="InvalidImageFormatException">
+    <rdfs:label>EH</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="ImageMediaAccessor">
+	<rdfs:label>P</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>SMS</rdfs:label>  
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.removeRecords2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.addMediaData" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.util.MediaUtil.readMediaAsByteArray" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.util.MediaUtil.getBytesFromMediaInfo" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.util.MediaUtil.getMediaInfoFromBytes" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.addMediaArrayOfBytes2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaBytesFromRMS2" />
+  </owl:Class>
+  <owl:Class rdf:about="ControllerInterface" />
+  <owl:Class rdf:about="MainUIMidlet">
+	<rdfs:label>V</rdfs:label>
+	<rdfs:label>M</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>SMS</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setNextController" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setImageAlbumData" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setImageController" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setMusicAlbumData" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setMusicController" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setVideoAlbumData" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setVideoController" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.SelectTypeOfMedia.initMenu" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setMainMenu" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.BaseController.init" />
+  </owl:Class>
+  <owl:Class rdf:about="BaseThread" />
+  <owl:Class rdf:about="SelectTypeOfMedia" >
+  	<rdfs:label>V</rdfs:label>
+	<rdfs:label>M</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>SMS</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="AlbumController">
+    <rdfs:label>EH</rdfs:label>
+	<rdfs:label>P</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentStoreName" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getCurrentStoreName" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setAlbumListAsCurrentScreen" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.deleteAlbum" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.NewLabelScreen.getFormType" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.createNewAlbum" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.NewLabelScreen.getLabelName" />
+    <owl:onProperty rdf:resource="#lancs.midp.mobilephoto.lib.exceptions.PersistenceMechanismException.getCause3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.resetMediaData" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum3" />
+  </owl:Class>
+  <owl:Class rdf:about="SmsReceiverThread">
+	<rdfs:label>SMS</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.sms.SmsMessaging.setSmsReceivePort" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.sms.SmsMessaging.receiveImage" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.sms.SmsMessaging.cleanUpReceiverConnections" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.sms.SmsReceiverController.setIncommingData" />
+  </owl:Class>
+  <owl:Class rdf:about="MediaListScreen" >
+    <rdfs:label>V</rdfs:label>
+	<rdfs:label>M</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>Sc</rdfs:label>
+	<rdfs:label>S</rdfs:label>
+	<rdfs:label>F</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="BaseMessaging" />
+  <owl:Class rdf:about="PhotoViewScreen">
+    <rdfs:label>EH</rdfs:label>
+	<rdfs:label>P</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>Sc</rdfs:label>
+	<rdfs:label>SMS</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="MusicMediaAccessor">
+    <rdfs:label>P</rdfs:label>
+	<rdfs:label>M</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.util.MediaUtil.readMediaAsByteArray2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.util.MusicMediaUtil.getBytesFromMediaInfo" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.util.MusicMediaUtil.getMultiMediaInfoFromBytes" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.removeRecords3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.addMediaData2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaDataFromRMS2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.updateMediaInfo2" />
+  </owl:Class>
+  <owl:Class rdf:about="SmsSenderController">
+    <rdfs:label>P</rdfs:label>
+	<rdfs:label>SMS</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.loadMediaBytesFromRMS" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getMediaLabel" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.sms.NetworkScreen.getRecPort" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.sms.NetworkScreen.getRecPhoneNum" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.sms.SmsSenderThread.setBinaryData" />
+  </owl:Class>
+  <owl:Class rdf:about="PlayVideoController">
+    <rdfs:label>P</rdfs:label>
+	<rdfs:label>V</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.PlayVideoScreen.startVideo" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.PlayVideoScreen.stopVideo" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen6" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setItemName3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setLabePath3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getPath3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addMediaData3" />
+    <owl:onProperty rdf:resource="#lancs.midp.mobilephoto.lib.exceptions.PersistenceMechanismException.getCause4" />
+  </owl:Class>
+  <owl:Class rdf:about="VideoCaptureController">
+    <rdfs:label>P</rdfs:label>
+	<rdfs:label>V</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.CaptureVideoScreen.startCapture" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.CaptureVideoScreen.pauseCapture" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setItemName4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setLabePath4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setCapturedMedia2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.CaptureVideoScreen.getByteArrays" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getItemName2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getPath4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addVideoData" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData6" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getCapturedMedia2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen7" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance6" />
+  </owl:Class>
+  <owl:Class rdf:about="MediaController">
+    <rdfs:label>V</rdfs:label>
+	<rdfs:label>M</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>P</rdfs:label>
+	<rdfs:label>S</rdfs:label>
+	<rdfs:label>F</rdfs:label>
+	<rdfs:label>SMS</rdfs:label>
+	<rdfs:label>EH</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName6" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance7" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen8" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.CaptureVideoScreen.setVisibleVideo" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData7" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen6" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setNextController2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.PhotoViewController.setCpVideoScreen" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addNewMediaToAlbum" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getItemName3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen6" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getPath5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentStoreName" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.loadMediaDataFromRMS" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getItemType" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.updateMediaInfo" />
+    <owl:onProperty rdf:resource="#lancs.midp.mobilephoto.lib.exceptions.PersistenceMechanismException.getCause5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.deleteMedia" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.MediaListController.showMediaList" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.toggleFavorite" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.isFavorite" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.NewLabelScreen.getLabelName2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.setMediaLabel" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MusicAlbumData.getMusicFromRecordStore" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MultiMediaData.getTypeMedia" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.MusicPlayController.setMediaName" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.VideoAlbumData.getVideoFromRecordStore" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.increaseNumberOfViews" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getNumberOfViews" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.ImageAlbumData.getImageFromRecordStore" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getCurrentScreenName" />
+  </owl:Class>
+  <owl:Class rdf:about="Constants" />
+  <owl:Class rdf:about="NetworkScreen">
+	<rdfs:label>Sc</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="MusicMediaUtil">
+ 	<rdfs:label>EH</rdfs:label>
+	<rdfs:label>M</rdfs:label>	
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MultiMediaData.getTypeMedia2" />
+  </owl:Class>
+  <owl:Class rdf:about="SmsReceiverController">
+ 	<rdfs:label>SMS</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.PhotoViewScreen.setImage" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.PhotoViewScreen.setFromSMS" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData8" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen7" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen9" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum6" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames6" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName7" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance8" />
+  </owl:Class>
+  <owl:Class rdf:about="UnavailablePhotoAlbumException">
+ 	<rdfs:label>EH</rdfs:label> 
+  </owl:Class> 
+  <owl:Class rdf:about="SelectMediaController">
+ 	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>M</rdfs:label>	
+ 	<rdfs:label>V</rdfs:label> 
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.BaseController.init2" />
+  </owl:Class>
+  <owl:Class rdf:about="MediaListController">
+    <rdfs:label>EH</rdfs:label>
+	<rdfs:label>S</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+	<rdfs:label>V</rdfs:label>
+	<rdfs:label>M</rdfs:label>
+	<rdfs:label>F</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentStoreName2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance9" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentStoreName2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName8" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData9" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen8" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setNextController3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.MediaListScreen.initMenu" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMedias" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.isFavorite2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getMediaLabel2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen10" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getNumberOfViews2" />
+  </owl:Class>
+  <owl:Class rdf:about="MediaData">
+    <rdfs:label>F</rdfs:label>
+	<rdfs:label>S</rdfs:label>
+	<rdfs:label>P</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="AlbumListScreen">
+    <rdfs:label>V</rdfs:label>
+	<rdfs:label>Sc</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="PlayMediaScreen" >
+	<rdfs:label>EH</rdfs:label>
+    <rdfs:label>M</rdfs:label>
+	<rdfs:label>Sc</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="MusicAlbumData">
+	<rdfs:label>M</rdfs:label>
+	<rdfs:label>P</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaBytesFromRMS3" />
+  </owl:Class>
+  <owl:Class rdf:about="NewLabelScreen" >
+	<rdfs:label>Sc</rdfs:label>
+  </owl:Class>  
+  <owl:Class rdf:about="AbstractController">
+	<rdfs:label>EH</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ControllerInterface.handleCommand" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ControllerInterface.postCommand" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getCurrentStoreName2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance10" />
+  </owl:Class>
+  <owl:Class rdf:about="CaptureVideoScreen">
+	<rdfs:label>EH</rdfs:label>
+    <rdfs:label>V</rdfs:label>
+	<rdfs:label>Sc</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+  </owl:Class> 
+  <owl:Class rdf:about="MultiMediaData">
+    <rdfs:label>V</rdfs:label>
+	<rdfs:label>S</rdfs:label>
+	<rdfs:label>F</rdfs:label>	
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getMediaLabel3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getRecordId" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.isFavorite3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getNumberOfViews3" />
+  </owl:Class>
+  <owl:Class rdf:about="PlayVideoScreen">
+	<rdfs:label>EH</rdfs:label>
+    <rdfs:label>V</rdfs:label>
+	<rdfs:label>Sc</rdfs:label>
+	<rdfs:label>Ph</rdfs:label>
+  </owl:Class> 
+  <owl:Class rdf:about="MediaUtil">
+	<rdfs:label>EH</rdfs:label>
+    <rdfs:label>F</rdfs:label>
+	<rdfs:label>S</rdfs:label>
+	<rdfs:label>P</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.setFavorite" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.setNumberOfViews" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.setRecordId" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getRecordId2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId6" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName6" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getMediaLabel4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.isFavorite4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getNumberOfViews4" />
+  </owl:Class>
+  <owl:Class rdf:about="ImageNotFoundException">
+	<rdfs:label>EH</rdfs:label>
+  </owl:Class>	
+  <owl:Class rdf:about="InvalidImageDataException" >
+	<rdfs:label>EH</rdfs:label>
+  </owl:Class>	
+  <owl:Class rdf:about="BaseController">
+    <rdfs:label>Ph</rdfs:label>
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames7" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen9" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.initMenu" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen11" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.MainUIMidlet.destroyApp" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getCurrentScreenName2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance11" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum7" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData10" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName9" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getMainMenu" />
+  </owl:Class>
+  <owl:Class rdf:about="SmsMessaging">
+    <rdfs:label>SMS</rdfs:label>
+  </owl:Class>	
+  <owl:Class rdf:about="MediaAccessor">
+	<rdfs:label>EH</rdfs:label>
+    <rdfs:label>P</rdfs:label>
+    <rdfs:label>Ph</rdfs:label> 
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.setRecordId2" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getMediaLabel5" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName7" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getRecordId3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId7" />
+  </owl:Class>
+  <owl:Class rdf:about="ScreenSingleton" >
+	<rdfs:label>V</rdfs:label>
+    <rdfs:label>Ph</rdfs:label>
+  </owl:Class>	
+  <owl:Class rdf:about="AlbumData">
+	<rdfs:label>EH</rdfs:label>
+    <rdfs:label>P</rdfs:label>
+    <rdfs:label>Ph</rdfs:label> 
+	<rdfs:label>SMS</rdfs:label>
+    <rdfs:label>V</rdfs:label>	
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadAlbums" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getAlbumNames" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaDataFromRMS3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.createNewAlbum" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.deleteAlbum" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.addMediaData3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.deleteSingleMediaFromRMS" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.resetRecordStore" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo6" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.updateMediaInfo3" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaBytesFromRMS4" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.VideoMediaAccessor.addVideoData" />
+    <owl:onProperty rdf:resource="#ubc.midp.mobilephoto.core.ui.datamodel.ImageMediaAccessor.addImageData" />
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.sms.SmsMessaging.sendImage">
+    <rdfs:domain rdf:resource="SmsSenderThread" />
+    <rdfs:range rdf:resource="SmsMessaging" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.PlayMediaScreen.startPlay">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="PlayMediaScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.PlayMediaScreen.pausePlay">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="PlayMediaScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setItemName">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setLabePath">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getPath">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addMediaData">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="lancs.midp.mobilephoto.lib.exceptions.PersistenceMechanismException.getCause">
+    <rdfs:domain rdf:resource="MusicPlayController" />
+    <rdfs:range rdf:resource="PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo">
+    <rdfs:domain rdf:resource="ImageAlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId">
+    <rdfs:domain rdf:resource="ImageAlbumData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName">
+    <rdfs:domain rdf:resource="ImageAlbumData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.ImageMediaAccessor.loadSingleImageFromRMS">
+    <rdfs:domain rdf:resource="ImageAlbumData" />
+    <rdfs:range rdf:resource="ImageMediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.removeRecords">
+    <rdfs:domain rdf:resource="VideoMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaDataFromRMS">
+    <rdfs:domain rdf:resource="VideoMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo2">
+    <rdfs:domain rdf:resource="VideoMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.updateMediaInfo">
+    <rdfs:domain rdf:resource="VideoMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.addMediaArrayOfBytes">
+    <rdfs:domain rdf:resource="VideoMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo3">
+    <rdfs:domain rdf:resource="VideoAlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId2">
+    <rdfs:domain rdf:resource="VideoAlbumData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName2">
+    <rdfs:domain rdf:resource="VideoAlbumData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaBytesFromRMS">
+    <rdfs:domain rdf:resource="VideoAlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setItemName2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setLabePath2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.PhotoViewScreen.isFromSMS">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="PhotoViewScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setCapturedMedia">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.PhotoViewScreen.getImage">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="PhotoViewScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getCapturedMedia">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getItemName">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getPath2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addImageData">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addMediaData2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="lancs.midp.mobilephoto.lib.exceptions.PersistenceMechanismException.getCause2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance2">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.CaptureVideoScreen.takePicture">
+    <rdfs:domain rdf:resource="PhotoViewController" />
+    <rdfs:range rdf:resource="CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.removeRecords2">
+    <rdfs:domain rdf:resource="ImageMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.addMediaData">
+    <rdfs:domain rdf:resource="ImageMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.util.MediaUtil.readMediaAsByteArray">
+    <rdfs:domain rdf:resource="ImageMediaAccessor" />
+    <rdfs:range rdf:resource="MediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.util.MediaUtil.getBytesFromMediaInfo">
+    <rdfs:domain rdf:resource="ImageMediaAccessor" />
+    <rdfs:range rdf:resource="MediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.util.MediaUtil.getMediaInfoFromBytes">
+    <rdfs:domain rdf:resource="ImageMediaAccessor" />
+    <rdfs:range rdf:resource="MediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.addMediaArrayOfBytes2">
+    <rdfs:domain rdf:resource="ImageMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaBytesFromRMS2">
+    <rdfs:domain rdf:resource="ImageMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setNextController">
+    <rdfs:domain rdf:resource="MainUIMidlet" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setImageAlbumData">
+    <rdfs:domain rdf:resource="MainUIMidlet" />
+    <rdfs:range rdf:resource="SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setImageController">
+    <rdfs:domain rdf:resource="MainUIMidlet" />
+    <rdfs:range rdf:resource="SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setMusicAlbumData">
+    <rdfs:domain rdf:resource="MainUIMidlet" />
+    <rdfs:range rdf:resource="SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setMusicController">
+    <rdfs:domain rdf:resource="MainUIMidlet" />
+    <rdfs:range rdf:resource="SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setVideoAlbumData">
+    <rdfs:domain rdf:resource="MainUIMidlet" />
+    <rdfs:range rdf:resource="SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.SelectMediaController.setVideoController">
+    <rdfs:domain rdf:resource="MainUIMidlet" />
+    <rdfs:range rdf:resource="SelectMediaController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.SelectTypeOfMedia.initMenu">
+    <rdfs:domain rdf:resource="MainUIMidlet" />
+    <rdfs:range rdf:resource="SelectTypeOfMedia" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setMainMenu">
+    <rdfs:domain rdf:resource="MainUIMidlet" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance3">
+    <rdfs:domain rdf:resource="MainUIMidlet" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.BaseController.init">
+    <rdfs:domain rdf:resource="MainUIMidlet" />
+    <rdfs:range rdf:resource="BaseController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName3">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance4">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen3">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentStoreName">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getCurrentStoreName">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setAlbumListAsCurrentScreen">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.deleteAlbum">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData3">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen3">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.NewLabelScreen.getFormType">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="NewLabelScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.createNewAlbum">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.NewLabelScreen.getLabelName">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="NewLabelScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="lancs.midp.mobilephoto.lib.exceptions.PersistenceMechanismException.getCause3">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.resetMediaData">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen3">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames3">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum3">
+    <rdfs:domain rdf:resource="AlbumController" />
+    <rdfs:range rdf:resource="AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.sms.SmsMessaging.setSmsReceivePort">
+    <rdfs:domain rdf:resource="SmsReceiverThread" />
+    <rdfs:range rdf:resource="SmsMessaging" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.sms.SmsMessaging.receiveImage">
+    <rdfs:domain rdf:resource="SmsReceiverThread" />
+    <rdfs:range rdf:resource="SmsMessaging" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen4">
+    <rdfs:domain rdf:resource="SmsReceiverThread" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.sms.SmsMessaging.cleanUpReceiverConnections">
+    <rdfs:domain rdf:resource="SmsReceiverThread" />
+    <rdfs:range rdf:resource="SmsMessaging" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.sms.SmsReceiverController.setIncommingData">
+    <rdfs:domain rdf:resource="SmsReceiverThread" />
+    <rdfs:range rdf:resource="SmsReceiverController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.util.MediaUtil.readMediaAsByteArray2">
+    <rdfs:domain rdf:resource="MusicMediaAccessor" />
+    <rdfs:range rdf:resource="MediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.util.MusicMediaUtil.getBytesFromMediaInfo">
+    <rdfs:domain rdf:resource="MusicMediaAccessor" />
+    <rdfs:range rdf:resource="MusicMediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.util.MusicMediaUtil.getMultiMediaInfoFromBytes">
+    <rdfs:domain rdf:resource="MusicMediaAccessor" />
+    <rdfs:range rdf:resource="MusicMediaUtil" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.removeRecords3">
+    <rdfs:domain rdf:resource="MusicMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.addMediaData2">
+    <rdfs:domain rdf:resource="MusicMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaDataFromRMS2">
+    <rdfs:domain rdf:resource="MusicMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo4">
+    <rdfs:domain rdf:resource="MusicMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.updateMediaInfo2">
+    <rdfs:domain rdf:resource="MusicMediaAccessor" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen5">
+    <rdfs:domain rdf:resource="SmsSenderController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo3">
+    <rdfs:domain rdf:resource="SmsSenderController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData4">
+    <rdfs:domain rdf:resource="SmsSenderController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.loadMediaBytesFromRMS">
+    <rdfs:domain rdf:resource="SmsSenderController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName3">
+    <rdfs:domain rdf:resource="SmsSenderController" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId3">
+    <rdfs:domain rdf:resource="SmsSenderController" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getMediaLabel">
+    <rdfs:domain rdf:resource="SmsSenderController" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.sms.NetworkScreen.getRecPort">
+    <rdfs:domain rdf:resource="SmsSenderController" />
+    <rdfs:range rdf:resource="NetworkScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.sms.NetworkScreen.getRecPhoneNum">
+    <rdfs:domain rdf:resource="SmsSenderController" />
+    <rdfs:range rdf:resource="NetworkScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.sms.SmsSenderThread.setBinaryData">
+    <rdfs:domain rdf:resource="SmsSenderController" />
+    <rdfs:range rdf:resource="SmsSenderThread" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.PlayVideoScreen.startVideo">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="PlayVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.PlayVideoScreen.stopVideo">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="PlayVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum4">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen4">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames4">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData5">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen6">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName4">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance5">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setItemName3">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setLabePath3">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo4">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getPath3">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen4">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addMediaData3">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="lancs.midp.mobilephoto.lib.exceptions.PersistenceMechanismException.getCause4">
+    <rdfs:domain rdf:resource="PlayVideoController" />
+    <rdfs:range rdf:resource="PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.CaptureVideoScreen.startCapture">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.CaptureVideoScreen.pauseCapture">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setItemName4">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setLabePath4">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.setCapturedMedia2">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.CaptureVideoScreen.getByteArrays">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getItemName2">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen5">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getPath4">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addVideoData">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData6">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getCapturedMedia2">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum5">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen5">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames5">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen7">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName5">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance6">
+    <rdfs:domain rdf:resource="VideoCaptureController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName6">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance7">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen8">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.CaptureVideoScreen.setVisibleVideo">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="CaptureVideoScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData7">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen6">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setNextController2">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.PhotoViewController.setCpVideoScreen">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="PhotoViewController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.addNewMediaToAlbum">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getItemName3">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentScreen6">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getPath5">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentStoreName">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.loadMediaDataFromRMS">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMediaInfo5">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AddMediaToAlbum.getItemType">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AddMediaToAlbum" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.updateMediaInfo">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="lancs.midp.mobilephoto.lib.exceptions.PersistenceMechanismException.getCause5">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="PersistenceMechanismException" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.deleteMedia">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.MediaListController.showMediaList">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="MediaListController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.toggleFavorite">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.isFavorite">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.NewLabelScreen.getLabelName2">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="NewLabelScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.setMediaLabel">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MusicAlbumData.getMusicFromRecordStore">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="MusicAlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MultiMediaData.getTypeMedia">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="MultiMediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.MusicPlayController.setMediaName">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="MusicPlayController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.VideoAlbumData.getVideoFromRecordStore">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="VideoAlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.increaseNumberOfViews">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getNumberOfViews">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.ImageAlbumData.getImageFromRecordStore">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="ImageAlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getCurrentScreenName">
+    <rdfs:domain rdf:resource="MediaController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MultiMediaData.getTypeMedia2">
+    <rdfs:domain rdf:resource="MusicMediaUtil" />
+    <rdfs:range rdf:resource="MultiMediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.PhotoViewScreen.setImage">
+    <rdfs:domain rdf:resource="SmsReceiverController" />
+    <rdfs:range rdf:resource="PhotoViewScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.PhotoViewScreen.setFromSMS">
+    <rdfs:domain rdf:resource="SmsReceiverController" />
+    <rdfs:range rdf:resource="PhotoViewScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData8">
+    <rdfs:domain rdf:resource="SmsReceiverController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen7">
+    <rdfs:domain rdf:resource="SmsReceiverController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen9">
+    <rdfs:domain rdf:resource="SmsReceiverController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum6">
+    <rdfs:domain rdf:resource="SmsReceiverController" />
+    <rdfs:range rdf:resource="AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames6">
+    <rdfs:domain rdf:resource="SmsReceiverController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName7">
+    <rdfs:domain rdf:resource="SmsReceiverController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance8">
+    <rdfs:domain rdf:resource="SmsReceiverController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.BaseController.init2">
+    <rdfs:domain rdf:resource="SelectMediaController" />
+    <rdfs:range rdf:resource="BaseController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentStoreName2">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance9">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getCurrentStoreName2">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName8">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData9">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen8">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setNextController3">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.MediaListScreen.initMenu">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="MediaListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getMedias">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.isFavorite2">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getMediaLabel2">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen10">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getNumberOfViews2">
+    <rdfs:domain rdf:resource="MediaListController" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo5">
+    <rdfs:domain rdf:resource="MusicAlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId4">
+    <rdfs:domain rdf:resource="MusicAlbumData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName4">
+    <rdfs:domain rdf:resource="MusicAlbumData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaBytesFromRMS3">
+    <rdfs:domain rdf:resource="MusicAlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ControllerInterface.handleCommand">
+    <rdfs:domain rdf:resource="AbstractController" />
+    <rdfs:range rdf:resource="ControllerInterface" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ControllerInterface.postCommand">
+    <rdfs:domain rdf:resource="AbstractController" />
+    <rdfs:range rdf:resource="ControllerInterface" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getCurrentStoreName2">
+    <rdfs:domain rdf:resource="AbstractController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance10">
+    <rdfs:domain rdf:resource="AbstractController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId5">
+    <rdfs:domain rdf:resource="MultiMediaData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName5">
+    <rdfs:domain rdf:resource="MultiMediaData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getMediaLabel3">
+    <rdfs:domain rdf:resource="MultiMediaData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getRecordId">
+    <rdfs:domain rdf:resource="MultiMediaData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.isFavorite3">
+    <rdfs:domain rdf:resource="MultiMediaData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getNumberOfViews3">
+    <rdfs:domain rdf:resource="MultiMediaData" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.setFavorite">
+    <rdfs:domain rdf:resource="MediaUtil" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.setNumberOfViews">
+    <rdfs:domain rdf:resource="MediaUtil" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.setRecordId">
+    <rdfs:domain rdf:resource="MediaUtil" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getRecordId2">
+    <rdfs:domain rdf:resource="MediaUtil" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId6">
+    <rdfs:domain rdf:resource="MediaUtil" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName6">
+    <rdfs:domain rdf:resource="MediaUtil" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getMediaLabel4">
+    <rdfs:domain rdf:resource="MediaUtil" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.isFavorite4">
+    <rdfs:domain rdf:resource="MediaUtil" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getNumberOfViews4">
+    <rdfs:domain rdf:resource="MediaUtil" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData.getAlbumNames7">
+    <rdfs:domain rdf:resource="BaseController" />
+    <rdfs:range rdf:resource="AlbumData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumListScreen9">
+    <rdfs:domain rdf:resource="BaseController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.initMenu">
+    <rdfs:domain rdf:resource="BaseController" />
+    <rdfs:range rdf:resource="AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.setCurrentScreen11">
+    <rdfs:domain rdf:resource="BaseController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.MainUIMidlet.destroyApp">
+    <rdfs:domain rdf:resource="BaseController" />
+    <rdfs:range rdf:resource="MainUIMidlet" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getCurrentScreenName2">
+    <rdfs:domain rdf:resource="BaseController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getInstance11">
+    <rdfs:domain rdf:resource="BaseController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen.repaintListAlbum7">
+    <rdfs:domain rdf:resource="BaseController" />
+    <rdfs:range rdf:resource="AlbumListScreen" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.AbstractController.getAlbumData10">
+    <rdfs:domain rdf:resource="BaseController" />
+    <rdfs:range rdf:resource="AbstractController" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.setCurrentScreenName9">
+    <rdfs:domain rdf:resource="BaseController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton.getMainMenu">
+    <rdfs:domain rdf:resource="BaseController" />
+    <rdfs:range rdf:resource="ScreenSingleton" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.setRecordId2">
+    <rdfs:domain rdf:resource="MediaAccessor" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getMediaLabel5">
+    <rdfs:domain rdf:resource="MediaAccessor" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getParentAlbumName7">
+    <rdfs:domain rdf:resource="MediaAccessor" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getRecordId3">
+    <rdfs:domain rdf:resource="MediaAccessor" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaData.getForeignRecordId7">
+    <rdfs:domain rdf:resource="MediaAccessor" />
+    <rdfs:range rdf:resource="MediaData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadAlbums">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getAlbumNames">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaDataFromRMS3">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.createNewAlbum">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.deleteAlbum">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.addMediaData3">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.deleteSingleMediaFromRMS">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.resetRecordStore">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.getMediaInfo6">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.updateMediaInfo3">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor.loadMediaBytesFromRMS4">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="MediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.VideoMediaAccessor.addVideoData">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="VideoMediaAccessor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="ubc.midp.mobilephoto.core.ui.datamodel.ImageMediaAccessor.addImageData">
+    <rdfs:domain rdf:resource="AlbumData" />
+    <rdfs:range rdf:resource="ImageMediaAccessor" />
+  </owl:ObjectProperty>
+</rdf:RDF>

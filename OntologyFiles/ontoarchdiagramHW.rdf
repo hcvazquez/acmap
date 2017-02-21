@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE rdf:RDF [
+          <!ENTITY xsd		"http://www.w3.org/2001/XMLSchema#" >
+	  <!ENTITY rdf		"http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	  <!ENTITY rdfs		"http://www.w3.org/2000/01/rdf-schema#" >
+	  <!ENTITY dc		"http://purl.org/dc/elements/1.1/" >
+	  <!ENTITY owl		"http://www.w3.org/2002/07/owl#" >
+	  <!ENTITY foaf 	"http://xmlns.com/foaf/0.1/">
+	  <!ENTITY ical 	"http://www.w3.org/2002/12/cal/ical#">]>
+
+<rdf:RDF
+ xmlns:rdf	="&rdf;"
+ xmlns:rdfs	="&rdfs;"
+ xmlns:owl	="http://www.w3.org/2002/07/owl#"
+ xmlns:dc	="&dc;">
+
+  <!-- Every entity (even external) must be typed in OWL-DL. -->
+
+  <!-- this is for satisfying the OWL Species validator
+       (which is not satisfied anyway) -->
+
+	   <!-- OWL Header Example -->
+
+<!--  Mobile Media BluePrint COmponents  -->
+
+	<owl:Class rdf:about="Gui_Elements">
+		<rdfs:label>GUI</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="Distribution_Manager">
+		<owl:onProperty rdf:resource="#InitConnection" />
+		<owl:onProperty rdf:resource="#ManageDistributedInfo" />
+		<rdfs:label>D</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="Concurrency_Control">
+		<owl:onProperty rdf:resource="#UseTimestampControl" />
+		<owl:onProperty rdf:resource="#UseSyncControl" />
+		<rdfs:label>CC</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="Business_Rules">
+		<owl:onProperty rdf:resource="#ManageInfo" />
+		<rdfs:label>B</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="Transaction_Control">
+		<owl:onProperty rdf:resource="#UseTransactionControl" />
+		<owl:onProperty rdf:resource="#InitPersistenceMechanism" />
+		<rdfs:label>P</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="Data_Manager">
+		<owl:onProperty rdf:resource="#ManageCompliant" />
+		<owl:onProperty rdf:resource="#ManageDisease" />
+		<owl:onProperty rdf:resource="#ManageSymptom" />
+		<owl:onProperty rdf:resource="#ManageEmployee" />
+		<owl:onProperty rdf:resource="#ManageHealthUnit" />
+		<owl:onProperty rdf:resource="#ManageSpeciality" />
+		<owl:onProperty rdf:resource="#ManageAddress" />
+		<rdfs:label>DM</rdfs:label>
+		<rdfs:label>EH</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="Exception">
+		<rdfs:label>EH</rdfs:label>
+	</owl:Class>
+	
+<!-- Mobile Media BluePrint Interfaces Required defined like a ObjectProperty-->		
+	
+	<owl:ObjectProperty rdf:ID="InitConnection">
+		<rdfs:domain rdf:resource="#Distribution_Manager" />
+		<rdfs:range rdf:resource="#Gui_Elements" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageDistributedInfo">
+		<rdfs:domain rdf:resource="#Distribution_Manager" />
+		<rdfs:range rdf:resource="#Gui_Elements" />
+	</owl:ObjectProperty>
+  
+	<owl:ObjectProperty rdf:ID="UseTimestampControl">
+		<rdfs:domain rdf:resource="#Concurrency_Control" />
+		<rdfs:range rdf:resource="#Business_Rules" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="UseSyncControl">
+		<rdfs:domain rdf:resource="#Concurrency_Control" />
+		<rdfs:range rdf:resource="#Business_Rules" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageInfo">
+		<rdfs:domain rdf:resource="#Business_Rules" />
+		<rdfs:range rdf:resource="#Distribution_Manager" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="UseTransactionControl">
+		<rdfs:domain rdf:resource="#Transaction_Control" />
+		<rdfs:range rdf:resource="#Business_Rules" />
+	</owl:ObjectProperty>	
+	
+	<owl:ObjectProperty rdf:ID="InitPersistenceMechanism">
+		<rdfs:domain rdf:resource="#Transaction_Control" />
+		<rdfs:range rdf:resource="#Business_Rules" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageCompliant">
+		<rdfs:domain rdf:resource="#Data_Manager" />
+		<rdfs:range rdf:resource="#Business_Rules" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageDisease">
+		<rdfs:domain rdf:resource="#Data_Manager" />
+		<rdfs:range rdf:resource="#Business_Rules" />
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ManageSymptom">
+		<rdfs:domain rdf:resource="#Data_Manager" />
+		<rdfs:range rdf:resource="#Business_Rules" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageEmployee">
+		<rdfs:domain rdf:resource="#Data_Manager" />
+		<rdfs:range rdf:resource="#Business_Rules" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageHealthUnit">
+		<rdfs:domain rdf:resource="#Data_Manager" />
+		<rdfs:range rdf:resource="#Business_Rules" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageSpeciality">
+		<rdfs:domain rdf:resource="#Data_Manager" />
+		<rdfs:range rdf:resource="#Business_Rules" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="ManageAddress">
+		<rdfs:domain rdf:resource="#Data_Manager" />
+		<rdfs:range rdf:resource="#Business_Rules" />
+	</owl:ObjectProperty>
+
+</rdf:RDF>
